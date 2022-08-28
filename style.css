@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Minecraft';
+	src: url("assets/Minecraft.eot?") format("embedded-opentype"),
+	     url("assets/Minecraft.ttf") format("truetype"),
+		 url("assets/Minecraft.woff") format("woff"),
+		 url("assets/Minecraft.woff2") format("woff2");
+}
+
+#main-page-header-static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('assets/sculk_background_48x.png');
+  background-size: 48px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Minecraft';
+  font-size: 300%;
+  text-shadow: 0.125em 0.125em #3f3f3f;
+  padding: 320px 0;
+  padding-bottom: 30px;
+}
