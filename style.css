@@ -63,20 +63,20 @@
 }
 
 #topbar {
-	background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url('assets/sculk_background_64x.png');
-  width: 100%;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
-  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  background-size: 64px;
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Minecraft';
-  font-size: 300%;
-  text-shadow: 0.125em 0.125em #3f3f3f;
-  padding: 20px 0;
-  padding-bottom: 30px;
-  position: relative;
-    overflow: hidden;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/sculk_background_64x.png');
+	width: 100%;
+	background-size: 64px;
+	text-align: center;
+	color: #ffffff;
+	font-family: 'Minecraft';
+	font-size: 300%;
+	text-shadow: 0.125em 0.125em #3f3f3f;
+	padding: 0 0;
+	padding-bottom: 25px;
+	position: sticky;
+	overflow: hidden;
+	line-height: 30px;
+	box-shadow: 0 0 10px black;
 }
 
 #topbar a {
