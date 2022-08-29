@@ -63,7 +63,7 @@
 }
 
 #topbar {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/sculk_background_64x.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/sculk_background_64x.png');
 	width: 100%;
 	background-size: 64px;
 	text-align: center;
@@ -138,13 +138,17 @@ h4 {
 }
 
 #mod {
-	background-color: black;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/deepslate_bricks_64x.png');
+	background-size: 64px;
 	border-radius: 5px;
 	width: max-content;
 	padding: 5px 15px;
 	margin: 10px;
 }
 
+#dd_thumb {
+	border: 2px solid black;
+}
 #mod img {
 	float: left;
 }
