@@ -153,6 +153,23 @@ h4 {
 	float: left;
 }
 
+.minecraft-button {
+	font-family: 'Minecraft';
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 0.125em 0.125em #3f3f3f;
+	background-image: url("assets/minecraft_button.png");
+	background-size: cover;
+	image-rendering: pixelated;
+	width: 200px;
+	height: 40px;
+	display: inline-block;
+}
+
+.minecraft-button:hover {
+	background-image: url("assets/minecraft_button_hover.png");
+}
+
 .main-page-mod-description {
 	font-family: 'Atkinson Hyperlegible';
 	color: #ffffff;
