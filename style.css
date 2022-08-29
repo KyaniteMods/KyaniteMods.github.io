@@ -63,9 +63,10 @@
 }
 
 #topbar {
+	background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url('assets/sculk_background_64x.png');
   width: 100%;
-  background-color: #000000; 
-  opacity: .6;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+  from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   background-size: 64px;
   text-align: center;
   color: #ffffff;
@@ -84,7 +85,7 @@
 	text-decoration: none;
 	font-size: 18px;
     overflow: hidden;
-	color: #ffffff;
+	color: white;
 	font-family: 'Minecraft';
 	position: relative;
 	text-shadow: none;
@@ -92,7 +93,7 @@
   }
 
   #topbar a:hover {
-	color: grey;
+	color: whitesmoke;
 	font-size: 19px;
   }
 
