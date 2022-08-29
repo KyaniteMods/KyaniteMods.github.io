@@ -1,3 +1,8 @@
+:root {
+	--text-color: #ffffff;
+	--text-color-light-mode: #000000;
+}
+
 @font-face {
 	font-family: 'Minecraft';
 	src: url("assets/Minecraft-Font/Minecraft.eot?") format("embedded-opentype"),
@@ -62,12 +67,17 @@
 	height: 100%;
 }
 
+.light-mode #topbar {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/white_concrete_powder_64x.png");
+	
+}
+
 #topbar {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/sculk_background_64x.png');
 	width: 100%;
 	background-size: 64px;
 	text-align: center;
-	color: #ffffff;
+	color: var(--text-color);
 	font-family: 'Minecraft';
 	font-size: 300%;
 	text-shadow: 0.125em 0.125em #3f3f3f;
@@ -77,6 +87,16 @@
 	overflow: hidden;
 	line-height: 30px;
 	box-shadow: 0 0 10px black;
+}
+
+.light-mode #topbar a {
+	color: var(--text-color-light-mode);
+}
+
+.light-mode #topbar a:hover {
+	color: var(--text-color-light-mode);
+	font-size: 19px;
+	text-shadow: 0.125em 0.125em #dddddd;
 }
 
 #topbar a {
@@ -109,14 +129,19 @@
     bottom: -15px;
   }
 
+.light-mode h1 {
+	color: var(--text-color-light-mode);
+	text-shadow: 0.05em 0.05em #aaaaaa;
+}
+
 h1 {
 	font-family: 'Minecraft';
-	color: #ffffff;
+	color: var(--text-color);
 	font-size: 40px;
 	text-align: center;
 	width: 100%;
 	font-weight: normal;
-	text-shadow: 0.05em 0.05em #000000;
+	text-shadow: 0.05em 0.05em #3f3f3f;
 }
 
 h2 {
@@ -137,13 +162,18 @@ h4 {
 	-webkit-font-smoothing: none;
 }
 
+.light-mode #mod {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/white_wool_64x.png");
+}
+
 #mod {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/deepslate_bricks_64x.png');
 	background-size: 64px;
-	border-radius: 5px;
+	border-radius: 2px;
 	width: max-content;
 	padding: 5px 15px;
 	margin: 10px;
+	box-shadow: 0 0 5px #555555;
 }
 
 #dd_thumb {
@@ -179,9 +209,13 @@ h4 {
 	background-image: url("assets/minecraft_button_hover.png");
 }
 
+.light-mode .main-page-mod-description {
+	color: var(--text-color-light-mode);
+}
+
 .main-page-mod-description {
 	font-family: 'Atkinson Hyperlegible';
-	color: #ffffff;
+	color: var(--text-color);
 	font-size: 20px;
 	margin-left: 10px;
 	padding-left: 10px;
@@ -255,6 +289,11 @@ h4 {
   left: -0.125em;
   border: 0.125em solid rgba(16,0,16,0.94);
   border-style: solid none;
+}
+
+.light-mode {
+	background-color: #ffffff;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/white_concrete_64x.png");
 }
 
 body {
