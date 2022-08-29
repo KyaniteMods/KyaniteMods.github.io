@@ -154,6 +154,13 @@ h4 {
 	float: left;
 }
 
+.topbar-item {
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	height: 30px;
+}
+
 .minecraft-button {
 	font-family: 'Minecraft';
 	color: #ffffff;
@@ -162,8 +169,9 @@ h4 {
 	background-image: url("assets/minecraft_button.png");
 	background-size: cover;
 	image-rendering: pixelated;
-	width: 200px;
-	height: 40px;
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
 	display: inline-block;
 }
 
