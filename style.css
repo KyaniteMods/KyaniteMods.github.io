@@ -77,11 +77,12 @@
 
 h1 {
 	font-family: 'Minecraft';
+	color: #ffffff;
 	font-size: 40px;
 	text-align: center;
 	width: 100%;
 	font-weight: normal;
-	text-shadow: 0.05em 0.05em #bbbbbb;
+	text-shadow: 0.05em 0.05em #000000;
 }
 
 h2 {
@@ -104,9 +105,85 @@ h4 {
 
 .main-page-mod-description {
 	font-family: 'Atkinson Hyperlegible';
+	color: #ffffff;
 	font-size: 20px;
 	margin-left: 10px;
 	padding-left: 10px;
+}
+
+.slot-item {
+  image-rendering: pixelated;
+  width: 32px;
+  z-index: 1;
+  position: absolute;
+}
+
+#item-glow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  z-index: 3;
+  display: none;
+}
+
+#item-glow:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#minecraft-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0.125em solid #2D0A63;
+  border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+  border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+  background-color: rgba(16,0,16,0.94);
+  color: #ffffff;
+  text-shadow: 0.125em 0.125em 0 #3F3F3F;
+  padding: 0.375em;
+  font-family: Minecraft,"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif;
+  word-spacing: 0.25em;
+  margin: 0.125em 0.25em;
+  padding-top: 0;
+  padding-bottom: 0.375em;
+  line-height: 1.125em;
+  z-index: 9999;
+  white-space: nowrap;
+  display: none;
+}
+
+#minecraft-tip br {
+  display: block;
+  content: "";
+  margin-top: 0.25em;
+}
+
+#minecraft-tip::before {
+  content: '';
+  position: absolute;
+  top: -0.125em;
+  right: -0.250em;
+  bottom: -0.125em;
+  left: -0.250em;
+  border: 0.125em solid rgba(16,0,16,0.94);
+  border-style: none solid;
+}
+
+#minecraft-tip::after {
+  content: '';
+  position: absolute;
+  top: -0.250em;
+  right: -0.125em;
+  bottom: -0.250em;
+  left: -0.125em;
+  border: 0.125em solid rgba(16,0,16,0.94);
+  border-style: solid none;
+}
+
+body {
+	background-color: #555555;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/deepslate_tiles_background_64x.png");
 }
 
 /* .main-page-mod-description h4 {
