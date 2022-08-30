@@ -59,13 +59,13 @@
 	font-style: italic;
 }
 
-#wrapper {
+/* #wrapper {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-}
+} */
 
 .light-mode #topbar {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
@@ -324,9 +324,21 @@ h4 {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/background-blocks/light-mode/white_concrete.png");
 }
 
+.footer {
+	padding: 20px;
+	text-align: center;
+	font-family: 'Atkinson Hyperlegible';
+	color: var(--text-color);
+}
+
+.light-mode .footer {
+	color: var(--text-color-light-mode);
+}
+
 body {
 	background-color: #555555;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
+	margin: 0;
 }
 
 /* .main-page-mod-description h4 {
