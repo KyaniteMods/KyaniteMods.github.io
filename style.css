@@ -68,12 +68,12 @@
 }
 
 .light-mode #topbar {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/white_concrete_powder_64x.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
 	
 }
 
 #topbar {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/sculk_background_64x.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk.png');
 	width: 100%;
 	background-size: 64px;
 	text-align: center;
@@ -164,7 +164,7 @@ h4 {
 }
 
 .light-mode #mod {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/white_wool_64x.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
 	box-shadow: 0 0 5px #555555;
 }
 
@@ -194,7 +194,7 @@ h4 {
 }
 
 #mod {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/sculk_stone_bricks_64x.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk_stone_bricks.png');
 	background-size: 64px;
 	border-radius: 2px;
 	width: max-content;
@@ -321,12 +321,12 @@ h4 {
 
 .light-mode {
 	background-color: #ffffff;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/white_concrete_64x.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/background-blocks/light-mode/white_concrete.png");
 }
 
 body {
 	background-color: #555555;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/deepslate_tiles_background_64x.png");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
 }
 
 /* .main-page-mod-description h4 {
