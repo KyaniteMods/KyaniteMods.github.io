@@ -320,12 +320,7 @@ h4 {
   border-style: solid none;
 }
 
-.light-mode {
-	background-color: #ffffff;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("assets/background-blocks/light-mode/white_concrete.png");
-}
-
-.footer {
+#footer {
 	padding: 20px;
 	margin-left: auto;
 	margin-right: auto;
