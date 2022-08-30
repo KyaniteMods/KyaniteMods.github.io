@@ -329,7 +329,7 @@ h4 {
 	color: var(--text-color);
 }
 
-.light-mode .footer {
+.light-mode #footer {
 	color: var(--text-color-light-mode);
 }
 
