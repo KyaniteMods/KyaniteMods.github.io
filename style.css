@@ -119,12 +119,15 @@
 	text-align: center;
 	text-decoration: none;
 	font-size: 12px;
-	height: 50px;
     overflow: hidden;
 	color: #ffffff;
 	font-family: 'Minecraft';
 	position:relative;
     bottom: -15px;
+  }
+  
+  .topbar-kyanite-logo {
+	  height: 50px;
   }
   
   .topbar-image {
