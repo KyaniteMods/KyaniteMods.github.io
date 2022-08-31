@@ -232,10 +232,17 @@ h4 {
 	padding: 5px 15px;
 	margin: 10px;
 	box-shadow: 0 0 5px #000000;
+	font-family: 'Atkinson Hyperlegible';
+	color: var(--text-color);
+	font-size: 20px;
 }
 
 .card img {
 	float: left;
+}
+
+.light-mode .card {
+	color: var(--text-color-light-mode);
 }
 
 .mod-left {
@@ -274,9 +281,6 @@ h4 {
 }
 
 .main-page-mod-description {
-	font-family: 'Atkinson Hyperlegible';
-	color: var(--text-color);
-	font-size: 20px;
 	margin-left: 10px;
 	padding-left: 10px;
 }
@@ -372,6 +376,7 @@ body {
 	background-color: #555555;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
 	margin: 0;
+	font-family: 'Atkinson Hyperlegible';
 }
 
 *::-webkit-scrollbar {
