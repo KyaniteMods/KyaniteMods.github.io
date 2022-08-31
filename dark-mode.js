@@ -5,7 +5,7 @@ var lightModeButton = document.getElementById("light-mode-button");
 if (localStorage.lightmode) {
 	if (localStorage.lightmode == 'true') {
 		$(wrapper).addClass("light-mode");
-		document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/assets/white_concrete.png')";
+		document.body.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/assets/background-blocks/light-mode/white_concrete.png')";
 		mcTip.innerHTML = "Switch to Dark Mode";
 		$(lightModeButton).attr("data-mctitle", "Switch to Dark Mode");
 	}
