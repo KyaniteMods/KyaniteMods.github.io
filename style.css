@@ -438,14 +438,6 @@ body {
 		margin-right: auto;
 		width: 90%;
 	}
-	
-	.topbar-item {
-		width: 30px;
-	}
-	
-	.topbar-kyanite-logo {
-		padding-top: 20px;
-	}
 }
 
 @media screen and (max-width: 800px) {
@@ -455,6 +447,14 @@ body {
 	
 	#topbar-small {
 		display: block;
+	}
+	
+	.topbar-item {
+		width: 30px;
+	}
+	
+	.topbar-kyanite-logo {
+		padding-top: 20px;
 	}
 }
 
