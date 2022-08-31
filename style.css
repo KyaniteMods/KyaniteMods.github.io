@@ -195,7 +195,7 @@ h4 {
 	-webkit-font-smoothing: none;
 }
 
-.light-mode .mod {
+.light-mode .card {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
 	box-shadow: 0 0 5px #555555;
 }
@@ -225,19 +225,22 @@ h4 {
 	background-image: url("assets/dark_mode_button_hover.png");
 }
 
-.mod {
+.card {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk_stone_bricks.png');
 	background-size: 64px;
 	border-radius: 2px;
-	width: 1000px;
 	padding: 5px 15px;
 	margin: 10px;
-	margin-left: 50px;
 	box-shadow: 0 0 5px #000000;
 }
 
-.mod img {
+.card img {
 	float: left;
+}
+
+.mod-left {
+	width: 1000px;
+	margin-left: 50px;
 }
 
 .topbar-item {
@@ -433,7 +436,7 @@ body {
 		padding-left: 0;
 	}
 	
-	.mod {
+	.mod-left {
 		margin-left: auto;
 		margin-right: auto;
 		width: 90%;
