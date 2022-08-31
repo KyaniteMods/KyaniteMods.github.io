@@ -452,6 +452,10 @@ body {
 	.topbar-item {
 		width: 30px;
 	}
+	
+	#light-mode-button {
+		top: 5px;
+	}
 }
 
 /* .main-page-mod-description h4 {
