@@ -63,9 +63,8 @@
 	padding-top: 100px;
 }
 
-.light-mode #topbar {
+.light-mode #topbar, .light-mode #topbar-small {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
-	
 }
 
 #topbar, #topbar-small {
@@ -78,10 +77,8 @@
 	font-size: 300%;
 	text-shadow: 0.125em 0.125em #3f3f3f;
 	padding: 0 0;
-	padding-bottom: 25px;
 	position: fixed;
 	overflow: hidden;
-	line-height: 30px;
 	box-shadow: 0 0 10px black;
 	z-index: 10;
 	top: 0;
@@ -90,11 +87,15 @@
 #topbar {
 	text-align: center;
 	display: block;
+	padding-bottom: 25px;
+	line-height: 30px;
 }
 
 #topbar-small {
 	display: none;
 	text-align: right;
+	line-height: 0;
+	padding-bottom: 0;
 }
 
 .light-mode #topbar a, .light-mode #topbar-small a {
@@ -147,6 +148,14 @@
 	  image-rendering: pixelated;
 	  top: 5px;
   }
+  
+  #topbar-small .topbar-image {
+	  margin-bottom: 20px;
+  }
+  
+   #topbar-small .topbar-kyanite-logo {
+	   height: 70px;
+   }
   
 .topbar-item:hover .topbar-image {
 	width: 36px;
@@ -428,6 +437,14 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 		width: 90%;
+	}
+	
+	.topbar-item {
+		width: 30px;
+	}
+	
+	.topbar-kyanite-logo {
+		padding-top: 20px;
 	}
 }
 
