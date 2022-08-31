@@ -129,11 +129,14 @@
   
   .topbar-image {
 	  transition: width 0.5s;
+	  width: 12px;
+	  height: 12px;
+	  image-rendering: pixelated;
   }
   
 .topbar-item:hover .topbar-image {
-	width: 12px;
-	height: 12px;
+	width: 24px;
+	height: 24px;
 } 
 
 .light-mode h1 {
