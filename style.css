@@ -68,7 +68,7 @@
 	
 }
 
-#topbar {
+#topbar, #topbar-small {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk.png');
 	width: 100%;
 	background-size: 64px;
@@ -87,12 +87,20 @@
 	top: 0;
 }
 
-.light-mode #topbar a {
+#topbar {
+	text-align: center;
+}
+
+#topbar-small {
+	display: none;
+	text-align: right;
+}
+
+.light-mode #topbar a, .light-mode #topbar-small a {
 	color: var(--text-color-light-mode);
 }
 
-.light-mode #topbar a:hover {
-	color: var(--text-color-light-mode);
+.light-mode #topbar a:hover, .light-mode #topbar a:hover {
 	font-size: 19px;
 	text-shadow: 0.125em 0.125em #dddddd;
 }
@@ -418,6 +426,16 @@ body {
 		margin-left: auto;
 		margin-right: auto;
 		width: 90%;
+	}
+}
+
+@media screen and (max-width: 800) {
+	#topbar {
+		display: none;
+	}
+	
+	#topbar-small {
+		display: block;
 	}
 }
 
