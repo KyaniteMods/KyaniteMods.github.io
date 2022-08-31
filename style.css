@@ -110,7 +110,7 @@
     bottom: 0;
   }
 
-  #topbar a:hover {
+  .topbar-item:hover .topbar-text {
 	color: whitesmoke;
 	font-size: 19px;
   }
@@ -126,6 +126,15 @@
 	position:relative;
     bottom: -15px;
   }
+  
+  .topbar-image {
+	  transition: width 0.5s;
+  }
+  
+.topbar-item:hover .topbar-image {
+	width: 12px;
+	height: 12px;
+} 
 
 .light-mode h1 {
 	color: var(--text-color-light-mode);
@@ -337,7 +346,7 @@ body {
 
 *::-webkit-scrollbar {
   width: 10px;
-  height: 12px;
+  height: 10px;
 }
 
 *::-webkit-scrollbar-button {
@@ -376,6 +385,12 @@ body {
 
 *::-webkit-scrollbar-corner {
   background-color: #4d4d4d;
+}
+
+@media screen and (max-width: 1000px){
+	.topbar-text {
+		display: none;
+	}
 }
 
 /* .main-page-mod-description h4 {
