@@ -123,23 +123,24 @@
 	color: #ffffff;
 	font-family: 'Minecraft';
 	position:relative;
-    bottom: -15px;
   }
   
   .topbar-kyanite-logo {
 	  height: 50px;
+	  bottom: -15px;
   }
   
   .topbar-image {
-	  transition: width 0.5s;
-	  width: 12px;
-	  height: 12px;
+	  transition: width 0.5s, height 0.5s;
+	  width: 27px;
+	  height: 27px;
 	  image-rendering: pixelated;
+	  top: 5px;
   }
   
 .topbar-item:hover .topbar-image {
-	width: 24px;
-	height: 24px;
+	width: 36px;
+	height: 36px;
 } 
 
 .light-mode h1 {
@@ -226,7 +227,7 @@ h4 {
 .topbar-item {
 	display: inline-block;
 	text-align: center;
-	width: 120px;
+	width: 160px;
 	height: 30px;
 }
 
