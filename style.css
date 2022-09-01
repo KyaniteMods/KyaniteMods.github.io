@@ -257,10 +257,8 @@ h4 {
 	font-family: 'Atkinson Hyperlegible';
 	color: var(--text-color);
 	font-size: 20px;
-}
-
-.card {
 	text-align: left;
+	width: 800px;
 }
 
 .card img {
@@ -553,7 +551,7 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-	.team-member, .text-card {
+	.team-member, .text-card, .card {
 		width: 90%;
 	}
 }
