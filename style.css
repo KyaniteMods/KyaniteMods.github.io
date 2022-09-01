@@ -67,6 +67,10 @@
 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
 }
 
+.light-mode {
+	color: var(--text-color-light-mode);
+}
+
 #topbar, #topbar-small {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk.png');
 	width: 100%;
@@ -246,7 +250,7 @@ h4 {
 }
 
 .team-member {
-	width: 400px;
+	width: 50%;
 	display: inline-block;
 }
 
