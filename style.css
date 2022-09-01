@@ -237,8 +237,21 @@ h4 {
 	font-size: 20px;
 }
 
+.card * {
+	text-align: left;
+}
+
 .card img {
 	float: left;
+}
+
+.team-member {
+	width: 400px;
+	display: inline-block;
+}
+
+.team-member .card-description * {
+	margin-top: 0;
 }
 
 .light-mode .card {
@@ -276,13 +289,15 @@ h4 {
 	background-image: url("assets/minecraft_button_hover.png");
 }
 
-.light-mode .main-page-mod-description {
+.light-mode .card-description {
 	color: var(--text-color-light-mode);
 }
 
-.main-page-mod-description {
+.card-description {
 	margin-left: 10px;
 	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .slot-item {
@@ -436,7 +451,7 @@ body {
 		width: 100%;
 	}
 	
-	.main-page-mod-description {
+	.card-description {
 		margin-left: 5px;
 		padding-left: 0;
 	}
