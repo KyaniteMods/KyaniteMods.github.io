@@ -300,6 +300,19 @@ h4 {
 	height: 60px;
 }
 
+.discord-button {
+	display: inline-block;
+	background-image: url("assets/discord_button.png");
+	background-size: cover;
+	image-rendering: pixelated;
+	width: 357px;
+	height: 60px;
+}
+
+.discord-button:hover {
+	background-image: url("assets/discord_button_hover.png");
+}
+
 .github-button {
 	background-image: url("assets/github_button.png");
 }
