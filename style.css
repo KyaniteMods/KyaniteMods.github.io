@@ -292,6 +292,38 @@ h4 {
 	height: 30px;
 }
 
+.github-button, .youtube-button, .twitter-button {
+	display: inline-block;
+	background-size: cover;
+	image-rendering: pixelated;
+	width: 60px;
+	height: 60px;
+}
+
+.github-button {
+	background-image: url("assets/github_button.png");
+}
+
+.github-button:hover {
+	background-image: url("assets/github_button_hover.png");
+}
+
+.youtube-button {
+	background-image: url("assets/youtube_button.png");
+}
+
+.youtube-button:hover {
+	background-image: url("assets/youtube_button_hover.png");
+}
+
+.twitter-button {
+	background-image: url("assets/twitter_button.png");
+}
+
+.twitter-button:hover {
+	background-image: url("assets/twitter_button_hover.png");
+}
+
 .minecraft-button {
 	font-family: 'Minecraft';
 	color: #ffffff;
