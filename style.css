@@ -400,6 +400,7 @@ body {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
 	margin: 0;
 	font-family: 'Atkinson Hyperlegible';
+	color: var(--text-color);
 }
 
 *::-webkit-scrollbar {
@@ -486,6 +487,12 @@ body {
 	
 	#light-mode-button {
 		top: 5px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.team-member {
+		width: 90%;
 	}
 }
 
