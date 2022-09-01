@@ -142,6 +142,11 @@ body * {
 	color: whitesmoke;
 	font-size: 19px;
   }
+  
+  .light-mode .topbar-item:hover .topbar-text {
+	color: var(--text-color-light-mode);
+	font-size: 19px;
+  }
 
   #topbar img {
 	text-align: center;
