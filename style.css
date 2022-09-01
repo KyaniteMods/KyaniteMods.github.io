@@ -295,7 +295,7 @@ h4 {
 
 .card-description {
 	margin-left: 10px;
-	padding-left: 10px;
+	padding-left: 0;
 	display: inline-block;
 	vertical-align: top;
 }
