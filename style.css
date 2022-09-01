@@ -106,7 +106,7 @@
 	color: var(--text-color-light-mode);
 }
 
-.light-mode #topbar a:hover, .light-mode #topbar a:hover {
+.light-mode #topbar a:hover, .light-mode #topbar-small a:hover {
 	color: var(--text-color-light-mode);
 	font-size: 19px;
 	text-shadow: 0.125em 0.125em #dddddd;
