@@ -308,6 +308,13 @@ h4 {
 	margin-bottom: 0;
 }
 
+.text-card {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
+}
+
 .slot-item {
   image-rendering: pixelated;
   width: 32px;
@@ -401,6 +408,11 @@ body {
 	margin: 0;
 	font-family: 'Atkinson Hyperlegible';
 	color: var(--text-color);
+	text-align: center;
+}
+
+body * {
+	text-align: left;
 }
 
 *::-webkit-scrollbar {
@@ -491,7 +503,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-	.team-member {
+	.team-member, .text-card {
 		width: 90%;
 	}
 }
