@@ -76,12 +76,13 @@ body * {
 	padding-top: 100px;
 }
 
-.light-mode #topbar, .light-mode #topbar-small {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
-}
-
 .light-mode {
 	color: var(--text-color-light-mode);
+}
+
+/* Topbar */
+.light-mode #topbar, .light-mode #topbar-small {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
 }
 
 #topbar, #topbar-small {
@@ -138,57 +139,65 @@ body * {
     bottom: 0;
   }
 
-  .topbar-item:hover .topbar-text {
+.topbar-item:hover .topbar-text {
 	color: whitesmoke;
 	font-size: 19px;
-  }
+}
   
-  .light-mode .topbar-item:hover .topbar-text {
+.light-mode .topbar-item:hover .topbar-text {
 	color: var(--text-color-light-mode);
 	font-size: 19px;
-  }
+}
 
-  #topbar img {
+#topbar img {
 	text-align: center;
 	text-decoration: none;
 	font-size: 12px;
     overflow: hidden;
 	color: #ffffff;
 	font-family: 'Minecraft';
-	position:relative;
-  }
+	position: relative;
+}
   
-  .topbar-kyanite-logo {
-	  height: 50px;
-	  bottom: -15px;
-  }
+.topbar-kyanite-logo {
+	height: 50px;
+	bottom: -15px;
+}
   
-  .topbar-image {
-	  transition: width 0.5s, height 0.5s;
-	  width: 27px;
-	  height: 27px;
-	  image-rendering: pixelated;
-	  top: 5px;
-  }
+.topbar-image {
+	transition: width 0.5s, height 0.5s;
+	width: 27px;
+	height: 27px;
+	image-rendering: pixelated;
+	top: 5px;
+}
   
-  #topbar-small .topbar-image {
-	  margin-bottom: 20px;
-  }
+.light-mode .topbar-image {
+	filter: invert(1);
+}
   
-   #topbar-small .topbar-kyanite-logo {
-	   height: 70px;
-   }
+#topbar-small .topbar-image {
+	margin-bottom: 20px;
+}
   
+#topbar-small .topbar-kyanite-logo {
+	height: 70px;
+}
+
+.topbar-item {
+	display: inline-block;
+	text-align: center;
+	width: 170px;
+	height: 30px;
+}
+
 .topbar-item:hover .topbar-image {
 	width: 36px;
 	height: 36px;
 } 
 
-.light-mode h1 {
-	color: var(--text-color-light-mode);
-	text-shadow: 0.05em 0.05em #aaaaaa;
-}
 
+/* Headers */
 h1 {
 	font-family: 'Minecraft';
 	color: var(--text-color);
@@ -197,6 +206,11 @@ h1 {
 	width: 100%;
 	font-weight: normal;
 	text-shadow: 0.05em 0.05em #3f3f3f;
+}
+
+.light-mode h1 {
+	color: var(--text-color-light-mode);
+	text-shadow: 0.05em 0.05em #aaaaaa;
 }
 
 h2 {
@@ -217,11 +231,7 @@ h4 {
 	-webkit-font-smoothing: none;
 }
 
-.light-mode .card {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
-	box-shadow: 0 0 5px #555555;
-}
-
+/* Light Mode Button */
 #light-mode-button {
 	position: absolute;
 	background-image: url("assets/light_mode_button.png");
@@ -247,6 +257,7 @@ h4 {
 	background-image: url("assets/dark_mode_button_hover.png");
 }
 
+/* Cards */
 .card {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk_stone_bricks.png');
 	background-size: 64px;
@@ -259,6 +270,11 @@ h4 {
 	font-size: 20px;
 	text-align: left;
 	width: 800px;
+}
+
+.light-mode .card {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
+	box-shadow: 0 0 5px #555555;
 }
 
 .card img {
@@ -283,13 +299,7 @@ h4 {
 	margin-left: 50px;
 }
 
-.topbar-item {
-	display: inline-block;
-	text-align: center;
-	width: 170px;
-	height: 30px;
-}
-
+/* Social Media Buttons */
 .github-button, .youtube-button, .twitter-button {
 	display: inline-block;
 	background-size: cover;
@@ -335,6 +345,7 @@ h4 {
 	background-image: url("assets/twitter_button_hover.png");
 }
 
+/* Minecraft Button */
 .minecraft-button {
 	font-family: 'Minecraft';
 	color: #ffffff;
@@ -354,15 +365,16 @@ h4 {
 	background-image: url("assets/minecraft_button_hover.png");
 }
 
-.light-mode .card-description {
-	color: var(--text-color-light-mode);
-}
-
+/* Cards */
 .card-description {
 	margin-left: 10px;
 	padding-left: 0;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.light-mode .card-description {
+	color: var(--text-color-light-mode);
 }
 
 .card-description h3 {
@@ -376,6 +388,70 @@ h4 {
 	width: 450px;
 }
 
+/* Footer */
+#footer {
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-family: 'Atkinson Hyperlegible';
+	color: var(--text-color);
+}
+
+.light-mode #footer {
+	color: var(--text-color-light-mode);
+}
+
+.mod-thumb {
+	border: 2px solid black;
+	width: 300px;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-button {
+  width: 8px;
+  height: 8px;
+  background-color: #262626;
+  border: 2px solid #4d4d4d;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-button:hover {
+  background-color: #333333;
+}
+
+*::-webkit-scrollbar-button:active {
+  background-color: #404040;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border: 2px solid #4d4d4d;
+  border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #333333;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #404040;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #4d4d4d;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: #4d4d4d;
+}
+
+/* Minecraft Tips */
 .slot-item {
   image-rendering: pixelated;
   width: 32px;
@@ -446,77 +522,13 @@ h4 {
   border-style: solid none;
 }
 
-#footer {
-	padding: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	font-family: 'Atkinson Hyperlegible';
-	color: var(--text-color);
-}
-
-.light-mode #footer {
-	color: var(--text-color-light-mode);
-}
-
-.light-mode .topbar-image {
-	filter: invert(1);
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-*::-webkit-scrollbar-button {
-  width: 8px;
-  height: 8px;
-  background-color: #262626;
-  border: 2px solid #4d4d4d;
-  border-radius: 2px;
-}
-
-*::-webkit-scrollbar-button:hover {
-  background-color: #333333;
-}
-
-*::-webkit-scrollbar-button:active {
-  background-color: #404040;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #262626;
-  border: 2px solid #4d4d4d;
-  border-radius: 2px;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #333333;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: #404040;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: #4d4d4d;
-  border-radius: 2px;
-}
-
-*::-webkit-scrollbar-corner {
-  background-color: #4d4d4d;
-}
-
-#dd-thumb {
-	border: 2px solid black;
-	width: 300px;
-}
-
+/* Compatibility with smaller screens */
 @media screen and (max-width: 1100px){
 	.topbar-text {
 		display: none;
 	}
 	
-	#dd-thumb {
+	.mod-thumb {
 		width: 100%;
 	}
 	
