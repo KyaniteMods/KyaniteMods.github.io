@@ -1,5 +1,7 @@
 var mcTip = document.getElementById("minecraft-tip");
 
+var advancedTooltips = false;
+
 $('.slot-item').mouseover(function(event) {
 		$('#item-glow').css("display", "block");
         var $PosTop = $(this).position().top;
@@ -18,7 +20,18 @@ $('#item-glow').mouseout(function() {
         $(this).css({display: 'none'});
     });
 	
-	
+$(document).keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '72'){
+	  if (advancedTooltips == false) {
+		advancedTooltips = true;
+		$(document.getElementById("light-mode-button")).attr("data-mclore", "<span style='color: #555555; text-shadow: 0.125em 0.125em #151515;'>minecraft:paper<br>NBT: 1 tag(s)</span>");
+	  } else {
+		advancedTooltips = false;
+		$(document.getElementById("light-mode-button")).removeAttr("data-mclore");
+	  }
+  }
+});
 
 $(".minecraft-item").mouseover(function(event) {
   $(mcTip).css("display", "block");
