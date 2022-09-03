@@ -1,6 +1,7 @@
 var wrapper = document.getElementById("wrapper");
 var mcTip = document.getElementById("minecraft-tip");
 var lightModeButton = document.getElementById("light-mode-button");
+var twitter = document.getElementsByClassName("twitter-timeline");
 
 if (localStorage.lightmode) {
 	if (localStorage.lightmode == 'true') {
@@ -11,6 +12,7 @@ if (localStorage.lightmode) {
 	}
 } else {
 	localStorage.lightmode = 'false';
+	$(twitter).attr("data-theme", "dark");
 }
 
 function toggleDarkMode() {
@@ -21,6 +23,7 @@ function toggleDarkMode() {
 		mcTip.innerHTML = "Switch to Light Mode";
 		$(lightModeButton).attr("data-mctitle", "Switch to Light Mode");
 		localStorage.lightmode = 'false';
+		$(twitter).attr("data-theme", "dark");
 	} else {
 		console.log("Adding Light Mode");
 		$(wrapper).addClass("light-mode");
@@ -28,5 +31,6 @@ function toggleDarkMode() {
 		mcTip.innerHTML = "Switch to Dark Mode";
 		$(lightModeButton).attr("data-mctitle", "Switch to Dark Mode");
 		localStorage.lightmode = 'true';
+		$(twitter).removeAttr("data-theme");
 	}
 }
