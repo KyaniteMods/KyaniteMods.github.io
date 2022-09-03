@@ -138,15 +138,18 @@ body * {
 	position: relative;
 	text-shadow: none;
     bottom: 0;
+}
+
+.topbar-text {
 	transition: width 0.5s, height 0.5s;
-  }
+}
 
 .topbar-item:hover .topbar-text {
-	font-size: 25px;
+	font-size: 23px;
 }
   
 .light-mode .topbar-item:hover .topbar-text {
-	font-size: 25px;
+	font-size: 23px;
 }
 
 #topbar img {
