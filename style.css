@@ -140,16 +140,12 @@ body * {
     bottom: 0;
 }
 
-.topbar-text {
-	transition: width 0.5s, height 0.5s;
-}
-
 .topbar-item:hover .topbar-text {
-	font-size: 23px;
+	font-size: 20px;
 }
   
 .light-mode .topbar-item:hover .topbar-text {
-	font-size: 23px;
+	font-size: 20px;
 }
 
 #topbar img {
