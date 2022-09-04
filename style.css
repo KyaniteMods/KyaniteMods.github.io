@@ -299,7 +299,7 @@ h4 {
 }
 
 /* Social Media Buttons */
-.github-button, .youtube-button, .twitter-button {
+.github-button, .youtube-button, .twitter-button, .discord-button, .email-button {
 	display: inline-block;
 	background-size: cover;
 	image-rendering: pixelated;
@@ -307,17 +307,17 @@ h4 {
 	height: 60px;
 }
 
-.discord-button {
+.discord-button-large {
 	display: inline-block;
-	background-image: url("assets/discord_button.png");
+	background-image: url("assets/discord_button_large.png");
 	background-size: cover;
 	image-rendering: pixelated;
 	width: 357px;
 	height: 60px;
 }
 
-.discord-button:hover {
-	background-image: url("assets/discord_button_hover.png");
+.discord-button-large:hover {
+	background-image: url("assets/discord_button_large_hover.png");
 }
 
 .github-button {
@@ -342,6 +342,22 @@ h4 {
 
 .twitter-button:hover {
 	background-image: url("assets/twitter_button_hover.png");
+}
+
+.discord-button {
+	background-image: url("assets/discord_button.png");
+}
+
+.discord-button:hover {
+	background-image: url("assets/discord_button_hover.png");
+}
+
+.email-button {
+	background-image: url("assets/email_button.png");
+}
+
+.email-button:hover {
+	background-image: url("assets/email_button_hover.png");
 }
 
 /* Minecraft Button */
