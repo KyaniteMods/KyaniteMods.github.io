@@ -1,22 +1,23 @@
 var mcTip = document.getElementById("minecraft-tip");
+var itemGlow = document.getElementById("item-glow");
 
 $('.slot-item').mouseover(function(event) {
-		$('#item-glow').css("display", "block");
         var $PosTop = $(this).position().top;
         var $PosLeft = $(this).position().left;
-		console.log($PosTop);
-        console.log($PosLeft);
-        $('#item-glow').insertAfter($(this)).css({display: 'block', top: $PosTop, left: $PosLeft});
-		$('#item-glow').attr("data-mctitle", $(this).attr("data-mctitle"));
+        $(itemGlow).insertAfter($(this)).css({display: 'block', top: $PosTop + 2, left: $PosLeft + 2});
+		$(itemGlow).attr("data-mctitle", $(this).attr("data-mctitle"));
 		if($(this).attr("data-mclore") != undefined) {
-			$('#item-glow').attr("data-mclore", $(this).attr("data-mclore"));
+			$(itemGlow).attr("data-mclore", $(this).attr("data-mclore"));
 		} else {
-			$('#item-glow').removeAttr("data-mclore");
+			$(itemGlow).removeAttr("data-mclore");
 		}
-    });
-$('#item-glow').mouseout(function() {
-        $(this).css({display: 'none'});
-    });
+});
+$('.item-wrapper').mouseover(function() {
+        $(itemGlow).css("display", "block");
+});
+$('.item-wrapper').mouseout(function() {
+        $(itemGlow).css("display", "none");
+});
 
 $(".minecraft-item").mouseover(function(event) {
   $(mcTip).css("display", "block");
