@@ -35,7 +35,7 @@ $(".minecraft-item").mouseover(function(event) {
   } else {
 	mcTip.innerHTML = event.target.dataset.mctitle;
   }
-  var x = event.pageX + 10 - event.pageX % 2;
+  var x = event.pageX + 9.5 - event.pageX % 2;
   var y = event.pageY - 28.5 - event.pageY % 2 - breakCount * 22;
   $(mcTip).css("marginLeft", x);
   $(mcTip).css("marginTop", y);
