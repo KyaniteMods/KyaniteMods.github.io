@@ -157,7 +157,11 @@ body * {
 	font-family: 'Minecraft';
 	position: relative;
 }
-  
+
+.topbar-text {
+	transition: font-size 0.5s;
+}
+
 .topbar-kyanite-logo {
 	height: 50px;
 	bottom: -15px;
