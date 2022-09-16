@@ -35,8 +35,8 @@ $(".minecraft-item").mouseover(function(event) {
   } else {
 	mcTip.innerHTML = event.target.dataset.mctitle;
   }
-  var x = event.pageX + 9.5 - event.pageX % 2;
-  var y = event.pageY - 28.5 - event.pageY % 2 - breakCount * 22;
+  var x = event.pageX + 9 - event.pageX % 2;
+  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
   $(mcTip).css("marginLeft", x);
   $(mcTip).css("marginTop", y);
 });
@@ -51,8 +51,8 @@ $(".minecraft-item").mousemove(function(event) {
   } else {
 	var breakCount = 0
   }
-  var x = event.pageX + 9.5 - event.pageX % 2;
-  var y = event.pageY - 28.5 - event.pageY % 2 - breakCount * 22;
+  var x = event.pageX + 9 - event.pageX % 2;
+  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
   $(mcTip).css("marginLeft", x);
   $(mcTip).css("marginTop", y);
 });
