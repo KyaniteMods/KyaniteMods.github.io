@@ -288,6 +288,15 @@ h4 {
 	float: right;
 }
 
+.mod-right .card-description {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.mod-right .card-description, .mod-right .card-description * {
+	text-align: right;
+}
+
 .team-member {
 	width: 550px;
 	display: inline-block;
@@ -311,6 +320,28 @@ h4 {
 	margin-left: auto;
 	margin-right: 50px;
 	text-align: right;
+}
+
+.card-description {
+	margin-left: 10px;
+	padding-left: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.light-mode .card-description {
+	color: var(--text-color-light-mode);
+}
+
+.card-description h3 {
+	margin-bottom: 0;
+}
+
+.text-card {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
 }
 
 /* Social Media Buttons */
@@ -393,29 +424,6 @@ h4 {
 
 .minecraft-button:hover {
 	background-image: url("assets/minecraft_button_hover.png");
-}
-
-/* Cards */
-.card-description {
-	margin-left: 10px;
-	padding-left: 0;
-	display: inline-block;
-	vertical-align: top;
-}
-
-.light-mode .card-description {
-	color: var(--text-color-light-mode);
-}
-
-.card-description h3 {
-	margin-bottom: 0;
-}
-
-.text-card {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 450px;
 }
 
 /* Footer */
