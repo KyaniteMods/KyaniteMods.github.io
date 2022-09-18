@@ -35,10 +35,15 @@ $(".minecraft-item").mouseover(function(event) {
   } else {
 	mcTip.innerHTML = event.target.dataset.mctitle;
   }
-  var x = event.pageX + 9 - event.pageX % 2;
+  if (window.innerWidth - event.pageX + 9 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
+	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
+  } else {
+	var x = event.pageX + 9 - event.pageX % 2;
+  }
+  // var x = event.pageX + 9 - event.pageX % 2;
   var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
-  $(mcTip).css("marginLeft", x);
-  $(mcTip).css("marginTop", y);
+  $(mcTip).css("left", x);
+  $(mcTip).css("top", y);
 });
 
 $(".minecraft-item").mousemove(function(event) {
@@ -51,10 +56,15 @@ $(".minecraft-item").mousemove(function(event) {
   } else {
 	var breakCount = 0
   }
-  var x = event.pageX + 9 - event.pageX % 2;
+  if (window.innerWidth - event.pageX + 9 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
+	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
+  } else {
+	var x = event.pageX + 9 - event.pageX % 2;
+  }
+  // var x = event.pageX + 9 - event.pageX % 2;
   var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
-  $(mcTip).css("marginLeft", x);
-  $(mcTip).css("marginTop", y);
+  $(mcTip).css("left", x);
+  $(mcTip).css("top", y);
 });
 
 $(".minecraft-item").mouseout(function(event) {
