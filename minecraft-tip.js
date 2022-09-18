@@ -35,7 +35,7 @@ $(".minecraft-item").mouseover(function(event) {
   } else {
 	mcTip.innerHTML = event.target.dataset.mctitle;
   }
-  if (window.innerWidth - event.pageX + 9 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
+  if (window.innerWidth - event.pageX - 17 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
 	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
   } else {
 	var x = event.pageX + 9 - event.pageX % 2;
@@ -56,7 +56,7 @@ $(".minecraft-item").mousemove(function(event) {
   } else {
 	var breakCount = 0
   }
-  if (window.innerWidth - event.pageX + 9 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
+  if (window.innerWidth - event.pageX - 17 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
 	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
   } else {
 	var x = event.pageX + 9 - event.pageX % 2;
