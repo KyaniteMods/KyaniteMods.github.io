@@ -603,7 +603,7 @@ h4 {
 }
 
 /* Compatibility with larger screens */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1900px) {
 	.mod-left, .mod-right {
 		margin-left: auto;
 		margin-right: auto;
