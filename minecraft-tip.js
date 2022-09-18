@@ -43,7 +43,7 @@ $(".minecraft-item").mouseover(function(event) {
   }
   // Sets Y position of the tip, considering possible overflow to the top
   if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
-	  var y = event.pageY - 20 - event.pageY % 2;
+	  var y = event.pageY + 20 - event.pageY % 2;
   } else {
 	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
   }
@@ -69,7 +69,7 @@ $(".minecraft-item").mousemove(function(event) {
   }
   // Sets Y position of the tip, considering possible overflow to the top
   if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
-	  var y = event.pageY - 20 - event.pageY % 2;
+	  var y = event.pageY + 20 - event.pageY % 2;
   } else {
 	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
   }
