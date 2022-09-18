@@ -35,13 +35,18 @@ $(".minecraft-item").mouseover(function(event) {
   } else {
 	mcTip.innerHTML = event.target.dataset.mctitle;
   }
+  // Sets X position of the tip, considering possible overflow to the right
   if (window.innerWidth - event.pageX - 17 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
 	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
   } else {
 	var x = event.pageX + 9 - event.pageX % 2;
   }
-  // var x = event.pageX + 9 - event.pageX % 2;
-  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+  // Sets Y position of the tip, considering possible overflow to the top
+  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
+	  var y = event.pageY - 20 - event.pageY % 2;
+  } else {
+	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+  }
   $(mcTip).css("left", x);
   $(mcTip).css("top", y);
 });
@@ -56,13 +61,18 @@ $(".minecraft-item").mousemove(function(event) {
   } else {
 	var breakCount = 0
   }
+  // Sets X position of the tip, considering possible overflow to the right
   if (window.innerWidth - event.pageX - 17 - event.pageX % 2 < $(mcTip).outerWidth(true)) {
 	var x = event.pageX - event.pageX % 2 - $(mcTip).outerWidth(true);  
   } else {
 	var x = event.pageX + 9 - event.pageX % 2;
   }
-  // var x = event.pageX + 9 - event.pageX % 2;
-  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+  // Sets Y position of the tip, considering possible overflow to the top
+  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
+	  var y = event.pageY - 20 - event.pageY % 2;
+  } else {
+	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+  }
   $(mcTip).css("left", x);
   $(mcTip).css("top", y);
 });
