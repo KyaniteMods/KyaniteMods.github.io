@@ -284,6 +284,10 @@ h4 {
 	float: left;
 }
 
+.mod-right img {
+	float: right;
+}
+
 .team-member {
 	width: 550px;
 	display: inline-block;
@@ -300,6 +304,13 @@ h4 {
 .mod-left {
 	width: 1000px;
 	margin-left: 50px;
+}
+
+.mod-right {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: 50px;
+	text-align: right;
 }
 
 /* Social Media Buttons */
@@ -556,7 +567,7 @@ h4 {
 		padding-left: 0;
 	}
 	
-	.mod-left {
+	.mod-left, .mod-right {
 		margin-left: auto;
 		margin-right: auto;
 		width: 90%;
@@ -588,6 +599,14 @@ h4 {
 @media screen and (max-width: 600px) {
 	.team-member, .text-card {
 		width: 90%;
+	}
+}
+
+/* Compatibility with larger screens */
+@media screen and (min-width: 1200px) {
+	.mod-left, .mod-right {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
