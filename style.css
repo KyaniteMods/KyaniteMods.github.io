@@ -489,6 +489,16 @@ h4 {
   background-color: #4d4d4d;
 }
 
+/* Minecraft Item Wrapper */
+.item-wrapper {
+	display: inline;
+	margin-left: 8px;
+}
+
+.item-wrapper-br {
+	display: none;
+}
+
 /* Minecraft Tips */
 .slot-item {
   image-rendering: pixelated;
@@ -607,6 +617,21 @@ h4 {
 @media screen and (max-width: 600px) {
 	.team-member, .text-card {
 		width: 90%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.item-wrapper {
+		margin-left: 0;
+	}
+	
+	.item-wrapper-br {
+		display: block;
+	}
+	
+	.item-wrapper::before {
+		content: '';
+		display: inline-block;
 	}
 }
 
