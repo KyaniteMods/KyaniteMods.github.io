@@ -42,10 +42,10 @@ $(".minecraft-item").mouseover(function(event) {
 	var x = event.pageX + 9 - event.pageX % 2;
   }
   // Sets Y position of the tip, considering possible overflow to the top
-  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
-	  var y = event.pageY + 20 - event.pageY % 2;
+  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < $(document).scrollTop()) {
+	  var y = event.pageY + 20 - event.pageY % 2 - $(document).scrollTop();
   } else {
-	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22 - $(document).scrollTop();
   }
   $(mcTip).css("left", x);
   $(mcTip).css("top", y);
@@ -68,10 +68,10 @@ $(".minecraft-item").mousemove(function(event) {
 	var x = event.pageX + 9 - event.pageX % 2;
   }
   // Sets Y position of the tip, considering possible overflow to the top
-  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < 0) {
-	  var y = event.pageY + 20 - event.pageY % 2;
+  if (event.pageY - 28 - event.pageY % 2 - breakCount * 22 < $(document).scrollTop()) {
+	  var y = event.pageY + 20 - event.pageY % 2 - $(document).scrollTop();
   } else {
-	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22;
+	  var y = event.pageY - 28 - event.pageY % 2 - breakCount * 22 - $(document).scrollTop();
   }
   $(mcTip).css("left", x);
   $(mcTip).css("top", y);

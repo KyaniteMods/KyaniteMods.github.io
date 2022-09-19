@@ -511,7 +511,7 @@ h4 {
 }
 
 #minecraft-tip {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   border: 0.125em solid #2D0A63;
