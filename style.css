@@ -344,8 +344,19 @@ h4 {
 	width: 450px;
 }
 
+.mod-small {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mod-small::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* Social Media Buttons */
-.github-button, .youtube-button, .twitter-button, .discord-button, .email-button {
+.github-button, .youtube-button, .twitter-button, .discord-button, .email-button, .curseforge-button, .modrinth-button {
 	display: inline-block;
 	background-size: cover;
 	image-rendering: pixelated;
@@ -404,6 +415,22 @@ h4 {
 
 .email-button:hover {
 	background-image: url("assets/email_button_hover.png");
+}
+
+.curseforge-button {
+	background-image: url("assets/curseforge_button.png");
+}
+
+.curseforge-button:hover {
+	background-image: url("assets/curseforge_button_hover.png");
+}
+
+.modrinth-button {
+	background-image: url("assets/modrinth_button.png");
+}
+
+.modrinth-button:hover {
+	background-image: url("assets/modrinth_button_hover.png");
 }
 
 /* Minecraft Button */
