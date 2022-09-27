@@ -2,9 +2,6 @@
 layout: post
 title:  "News Blog"
 permalink: /post/news-blog-announcement
-authors:
-  - pr_ib
-  - nitro_dynamite18
 
 header-image: /assets/post-images/news_blog_announcement_new.png
 

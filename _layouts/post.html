@@ -7,25 +7,7 @@ layout: default
 {%- endif -%}
 
 {%- if page.header-image -%}
-<img src="{{ page.header-image }}" style="width: 80%; border: 2px solid #000; image-rendering: pixelated;">
-{%- else -%}
-<img src="/assets/post_placeholder.png" style="width: 80%; border: 2px solid #000; image-rendering: pixelated;">
+	<img src="{{ page.header-image }}" class="post-image">
 {%- endif -%}
 
-{%- if page.authors -%}
-	<div style="margin-left: auto; margin-right: auto; width: 80%; text-align: left;">Written by&nbsp;
-	{%- assign author_count = page.authors.size -%}
-	{%- for author in page.authors -%}
-		{%- if author_count == 1 -%}
-			{{ author }} (1)</div>
-		{%- elsif author.last -%}
-			and {{ author }} (2)</div>
-		{%- elsif authorcount >= 3 -%}
-			{{ author }}, (3)
-		{%- else -%}
-			{{ author }} (4)
-		{%- endif -%}
-	{%- endfor -%}
-{%- endif -%}
-
-<div class="card" style="margin-left: auto; margin-right: auto; width: 75%;">{{ page.main-text }}</div>
+<div class="card post-text">{{ page.main-text }}</div>

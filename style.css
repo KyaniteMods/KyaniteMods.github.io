@@ -625,7 +625,6 @@ h4 {
     width: 100%;
     height: auto;
     z-index: -1;
-	transition: fade 0.5s;
 }
 
 .img-card:hover>img:first-of-type {
@@ -635,6 +634,18 @@ h4 {
 .news-posts {
 	grid-template-columns: repeat(3, 3fr);
 	text-align: center;
+}
+
+.post-image {
+	width: 80%;
+	border: 2px solid #000;
+	image-rendering: pixelated;
+}
+
+.post-text {
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
 }
 
 /* Compatibility with smaller screens */
@@ -715,6 +726,20 @@ h4 {
 	.mod-left, .mod-right {
 		margin-left: auto;
 		margin-right: auto;
+	}
+	
+	.post-image {
+		width: 1710px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.post-image {
+		width: 1440px;
+	}
+	
+	.post-text {
+		width: 1200px;
 	}
 }
 
