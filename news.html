@@ -8,9 +8,9 @@ title: News
 {%- for post in site.posts -%}
 <a class="img-card" href="{{ post.permalink }}">
 	{%- if post.header-image -%}
-		<img src="{{ post.header-image }}" style="width: 100%; image-rendering: pixelated; position: absolute;">
+		<img src="{{ post.header-image }}">
 	{%- else -%}
-		<img src="/assets/post_placeholder.png" style="width: 100%; image-rendering: pixelated; position: absolute;">
+		<img src="/assets/post_placeholder.png">
 	{%- endif -%}
 <br><h2>{{ post.title }}</h2></a>
 {%- endfor -%}
