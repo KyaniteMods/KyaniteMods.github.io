@@ -19,7 +19,6 @@ layout: default
 		<h1>Link</h1>
 	{%- endif -%}
 	{%- for item in page.links -%}
-		{%- assign link = item | split: ": " -%}
-			<a href="{{ link[1] }}"><div class="minecraft-button">{{ link[0] }}</div></a>
+			<a href="{{ item[1] }}"><div class="minecraft-button">{{ item[0] }}</div></a><br>
 	{%- endfor -%}
 {%- endif -%}
