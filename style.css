@@ -605,7 +605,7 @@ h4 {
 	max-width: 900px;
 	max-height: 450px;
 	overflow: hidden;
-	display: flex;
+	display: block;
 }
 
 .img-card * {
@@ -615,8 +615,10 @@ h4 {
 
 .img-card>img:first-of-type {
 	position: relative;
+	image-rendering: pixelated;
 	width: 100%;
 	height: 100%;
+	z-index: -1;
 }
 
 .news-posts {
