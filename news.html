@@ -5,13 +5,18 @@ title: News
 
 <h1>News</h1>
 <div class="news-posts">
+{%- assign post_count = site.posts.size -%}
 {%- for post in site.posts -%}
-<a class="img-card" href="{{ post.permalink }}">
-	{%- if post.header-image -%}
-		<img src="{{ post.header-image }}">
-	{%- else -%}
-		<img src="/assets/post_placeholder.png">
+	{%- assign post_count = post_count | minus: 1 -%}
+	<a class="img-card" href="{{ post.permalink }}">
+		{%- if post.header-image -%}
+			<img src="{{ post.header-image }}">
+		{%- else -%}
+			<img src="/assets/post_placeholder.png">
+		{%- endif -%}
+	<br><h4>{{ post.title }}</h4></a>
+	{%- if post_count != 0 -%}
+		&nbsp;
 	{%- endif -%}
-<br><h4>{{ post.title }}</h4></a> 
 {%- endfor -%}
 </div>
