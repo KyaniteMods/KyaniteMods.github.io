@@ -3,9 +3,7 @@ layout: post
 title:  "News Blog"
 permalink: /post/news-blog-announcement
 links:
-  - Item
-    - Subitem
-	- Subitem
+  - CurseForge: https://curseforge.com/minecraft/mc-mods/deeperdarker
 
 header-image: /assets/post-images/news_blog_announcement_new.png
 
