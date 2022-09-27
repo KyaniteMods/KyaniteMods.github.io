@@ -17,9 +17,9 @@ layout: default
 	{%- assign author_count = page.authors.size -%}
 	{%- for author in page.authors -%}
 		{%- if author_count == 1 -%}
-			{{ author }}
+			{{ author }}</div>
 		{%- elsif author.last -%}
-			and {{ author }}
+			and {{ author }}</div>
 		{%- elsif authorcount >= 3 -%}
 			{{ author }}, 
 		{%- endif -%}
