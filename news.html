@@ -4,14 +4,14 @@ title: News
 ---
 
 <h1>News</h1>
-<div style="width: 40%; text-align: left;">
-{%- for post in site.posts limit:1 -%}
-<a style="width: 40%;" href="{{ post.permalink }}">
+<div class="news-posts">
+{%- for post in site.posts -%}
+<a class="img-card" href="{{ post.permalink }}">
 	{%- if post.header-image -%}
 		<img src="{{ post.header-image }}" style="width: 100%; image-rendering: pixelated; position: absolute;">
 	{%- else -%}
 		<img src="/assets/post_placeholder.png" style="width: 100%; image-rendering: pixelated; position: absolute;">
 	{%- endif -%}
-<br><h3>{{ post.title }}</h3></a>
+<br><h2>{{ post.title }}</h2></a>
 {%- endfor -%}
 </div>
