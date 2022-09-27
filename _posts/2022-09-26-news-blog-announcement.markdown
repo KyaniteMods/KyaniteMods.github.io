@@ -2,6 +2,10 @@
 layout: post
 title:  "News Blog"
 permalink: /post/news-blog-announcement
+links:
+  - Item
+    - Subitem
+	- Subitem
 
 header-image: /assets/post-images/news_blog_announcement_new.png
 

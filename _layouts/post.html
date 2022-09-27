@@ -11,3 +11,18 @@ layout: default
 {%- endif -%}
 
 <div class="card post-text">{{ page.main-text }}</div>
+
+{%- if page.links -%}
+	{%- if page.links.size > 1 -%}
+		<h1>Links</h1>
+	{%- else -%}
+		<h1>Link</h1>
+	{%- endif -%}
+	{%- for item in page.links -%}
+		<p>1 item</p>
+		{%- for subitem in item -%}
+			<p>1 subitem</p>
+			<p>2 subitem</p>
+		{%- endfor -%}
+	{%- endfor -%}
+{%- endif -%}
