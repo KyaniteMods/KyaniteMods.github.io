@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{%- if page.title -%}
+	<h1>{{ page.title }}</h1>
+{%- endif -%}
+
+{%- if page.header-image -%}
+<img src="{{ page.header-image }}" style="width: 90%; border: 2px solid #000; image-rendering: pixelated;">
+{%- else -%}
+<img src="/assets/post_placeholder.png" style="width: 90%; border: 2px solid #000; image-rendering: pixelated;">
+{%- endif -%}
+
+<div class="card" style="margin-left: auto; margin-right: auto; width: 75%;">{{ main-text }}</div>
