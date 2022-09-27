@@ -604,6 +604,8 @@ h4 {
 	padding-top: 50%;
 	max-width: 900px;
 	max-height: 450px;
+	overflow: hidden;
+	display: flex;
 }
 
 .img-card>img:first-of-type {
