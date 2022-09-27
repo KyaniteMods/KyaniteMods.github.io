@@ -1,0 +1,15 @@
+---
+layout: default
+title: News
+---
+
+<h1>News</h1>
+{%- for post in site.posts limit:1 -%}
+<a href="{{ post.permalink }}">
+	{%- if post.header-image -%}
+	<img src="{{ post.header-image }}" style="width: 80%; border: 2px solid #000; image-rendering: pixelated;">
+	{%- else -%}
+	<img src="/assets/post_placeholder.png" style="width: 80%; border: 2px solid #000; image-rendering: pixelated;">
+	{%- endif -%}
+<br>{{ post.title }}</a>
+{%- endfor -%}
