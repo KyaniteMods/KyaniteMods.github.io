@@ -10,7 +10,13 @@ layout: default
 	<img src="{{ page.header-image }}" class="post-image">
 {%- endif -%}
 
-<div class="card post-text">{{ page.main-text }}</div>
+<div class="card post-text">
+	{%- if page.markdown != false -%}
+		{{ page.main-text | markdownify }}
+	{%- else -%}
+		{{ page.main-text }}
+	{%- endif -%}
+</div>
 
 {%- if page.links -%}
 	{%- if page.links.size > 1 -%}
@@ -21,4 +27,9 @@ layout: default
 	{%- for item in page.links -%}
 			<a href="{{ item[1] }}"><div class="minecraft-button">{{ item[0] }}</div></a><br>
 	{%- endfor -%}
+{%- endif -%}
+
+{% assign content = post.content | strip_newlines %}
+{%- if content != "" -%}
+	<div class="card post-text">{{ content }}</div>
 {%- endif -%}

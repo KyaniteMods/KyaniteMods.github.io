@@ -625,10 +625,14 @@ h4 {
     width: 100%;
     height: auto;
     z-index: -1;
+	transition: ease 0.5s;
 }
 
 .img-card:hover>img:first-of-type {
 	filter: brightness(1.5) contrast(0.8);
+	width: 110%;
+	top: -5%;
+	left: -5%;
 }
 
 .news-posts {
