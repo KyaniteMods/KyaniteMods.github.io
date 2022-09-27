@@ -16,6 +16,24 @@ title: Home
 <img src="{{ site.baseurl }}/assets/contributors/Rotch_Gwylt.png" style="width: 16px; image-rendering: pixelated;" class="minecraft-item" data-mctitle="!"><span style="vertical-align: 2px;"> Rotch_Gwylt (Rotch Gwylt#6265) • Composer</span><br>
 <img src="{{ site.baseurl }}/assets/contributors/SockMan3288.png" style="width: 16px; image-rendering: pixelated;"><span style="vertical-align: 2px;"> SockMan3288 (garterSnake()#4502) • Former Team Member (Artist)</span><br>
 <img src="{{ site.baseurl }}/assets/contributors/YeoXuHang0722.png" style="width: 16px; image-rendering: pixelated;"><span style="vertical-align: 2px;"> YeoXuHang0722 (YeoXuHang#1622) • Deeper And Darker Logo</span>
+<h1>News</h1>
+<div class="news-posts">
+{%- assign post_count = site.posts.size -%}
+{%- for post in site.posts limit: 3 -%}
+	{%- assign post_count = post_count | minus: 1 -%}
+	<a class="img-card" href="{{ post.permalink }}">
+		{%- if post.header-image -%}
+			<img src="{{ post.header-image }}">
+		{%- else -%}
+			<img src="/assets/post_placeholder.png">
+		{%- endif -%}
+	<br><h4>{{ post.title }}</h4></a>
+	{%- if post_count != 0 -%}
+		&nbsp;
+	{%- endif -%}
+{%- endfor -%}
+</div><br>
+<a href="/news"><div class="minecraft-button">See More</div></a>
 <h1>Mods</h1>
 <div class="card mod-small"><div style="display: inline-block; height: 60px; float: left; line-height: 60px;">Deeper And Darker</div><div style="display: inline-block; text-align: right; float: right; height: 60px;"><a href="https://www.curseforge.com/minecraft/mc-mods/deeperdarker" class="curseforge-button minecraft-item" data-mctitle="CurseForge" data-mclore="Deeper And Darker"></a> <a href="https://modrinth.com/mod/deeperdarker" class="modrinth-button minecraft-item" data-mctitle="Modrinth" data-mclore="Deeper And Darker"></a></div></div>
 <h1>Discord Server</h1>
