@@ -21,7 +21,9 @@ layout: default
 		{%- elsif author.last -%}
 			and {{ author }}</div>
 		{%- elsif authorcount >= 3 -%}
-			{{ author }}, 
+			{{ author }},
+		{%- else -%}
+			{{ author }}
 		{%- endif -%}
 	{%- endfor -%}
 {%- endif -%}
