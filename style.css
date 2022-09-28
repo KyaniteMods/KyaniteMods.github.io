@@ -606,6 +606,8 @@ h4 {
     max-width: 90%;
     overflow: hidden;
     display: inline-block;
+	border-radius: 5px;
+    box-shadow: 0 0 5px #000;
 }
 
 .img-card * {
