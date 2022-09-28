@@ -12,6 +12,18 @@ layout: default
 {%- endif -%}
 
 <div class="card post-text">
+	{%- if page.author-image or page.author -%}
+		<div style="display: block; height: 64px; margin-top: 5px;">
+	{%- endif -%}
+	{%- if page.author-image -%}
+		<img src="{{ page.author-image }}" style="image-rendering: pixelated; width: 64px;">
+	{%- endif -%}
+	{%- if page.author -%}
+		<p style="padding-left: 74px; margin-top: 0; margin-bottom: 0; line-height: 64px;">Written by {{ page.author }}</p>
+	{%- endif -%}
+	{%- if page.author-image or page.author -%}
+		</div>
+	{%- endif -%}
 	{%- if page.markdown != false -%}
 		{{ page.main-text | markdownify }}
 	{%- else -%}
