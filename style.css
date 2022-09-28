@@ -446,6 +446,7 @@ h4 {
 	height: 60px;
 	line-height: 56px;
 	padding-bottom: 4px;
+	font-size: initial;
 	display: inline-block;
 }
 
