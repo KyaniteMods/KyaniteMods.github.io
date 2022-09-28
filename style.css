@@ -654,6 +654,15 @@ h4 {
 	width: 75%;
 }
 
+#author {
+	display: block;
+	height: 64px;
+	margin-top: 5px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Compatibility with smaller screens */
 @media screen and (max-width: 1100px){
 	.topbar-text {
@@ -746,6 +755,10 @@ h4 {
 	
 	.post-text {
 		width: 1200px;
+	}
+	
+	#author {
+		width: 1440px;
 	}
 }
 
