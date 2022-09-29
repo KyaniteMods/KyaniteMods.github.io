@@ -89,6 +89,10 @@ body * {
 	color: var(--text-color-light-mode);
 }
 
+.minecraft-emoji {
+	font-family: 'Minecraft Emoji';
+}
+
 /* Topbar */
 .light-mode #topbar, .light-mode #topbar-small {
 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
