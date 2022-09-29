@@ -4,6 +4,14 @@
 }
 
 @font-face {
+	font-family: 'Minecraft Emoji';
+	src: url("assets/Minecraft-Emoji/Minecraft-Emoji.eot?") format("embedded-opentype"),
+	     url("assets/Minecraft-Emoji/Minecraft-Emoji.ttf") format("truetype"),
+		 url("assets/Minecraft-Emoji/Minecraft-Emoji.woff") format("woff"),
+		 url("assets/Minecraft-Emoji/Minecraft-Emoji.woff2") format("woff2");
+}
+
+@font-face {
 	font-family: 'Minecraft';
 	src: url("assets/Minecraft-Font/Minecraft.eot?") format("embedded-opentype"),
 	     url("assets/Minecraft-Font/Minecraft.ttf") format("truetype"),
@@ -93,7 +101,6 @@ body * {
 	text-align: center;
 	color: var(--text-color);
 	font-family: 'Minecraft';
-	font-size: 300%;
 	text-shadow: 0.125em 0.125em #3f3f3f;
 	padding: 0 0;
 	position: fixed;
@@ -106,15 +113,14 @@ body * {
 #topbar {
 	text-align: center;
 	display: block;
-	padding-bottom: 25px;
-	line-height: 30px;
+	height: 80px;
+	font-size: 300%;
 }
 
 #topbar-small {
 	display: none;
 	text-align: right;
-	line-height: 0;
-	padding-bottom: 0;
+	height: 70px;
 }
 
 .light-mode #topbar a, .light-mode #topbar-small a {
@@ -129,18 +135,24 @@ body * {
 
 #topbar a {
 	text-align: center;
-	padding: 14px 16px;
+	padding: 0;
 	text-decoration: none;
 	font-size: 18px;
     overflow: hidden;
-	color: white;
+	color: var(--text-color);
 	font-family: 'Minecraft';
 	position: relative;
 	text-shadow: none;
-    bottom: 0;
+	display: inline-block;
+	height: 100%;
+	line-height: 80px;
 }
 
-.topbar-item:hover .topbar-text {
+.topbar-item a {
+	text-decoration: none;
+}
+
+.topbar-item:hover .topbar-text, .topbar-item:hover .topbar-icon {
 	font-size: 20px;
 }
   
@@ -158,13 +170,13 @@ body * {
 	position: relative;
 }
 
-.topbar-text {
+.topbar-text, .topbar-icon {
 	transition: font-size 0.5s;
 }
 
 .topbar-kyanite-logo {
 	height: 50px;
-	bottom: -15px;
+	transform: translateY(-25%);
 }
   
 .topbar-image {
@@ -185,13 +197,20 @@ body * {
   
 #topbar-small .topbar-kyanite-logo {
 	height: 70px;
+	transform: none;
+	float: right;
+}
+
+#topbar-small .topbar-item {
+	height: 100%;
+	line-height: 70px;
 }
 
 .topbar-item {
 	display: inline-block;
 	text-align: center;
 	width: 170px;
-	height: 30px;
+	height: 100%;
 }
 
 .topbar-item:hover .topbar-image {
@@ -199,6 +218,14 @@ body * {
 	height: 36px;
 } 
 
+.topbar-icon {
+	color: var(--text-color);
+	text-shadow: none;
+}
+
+.light-mode .topbar-icon {
+	color: var(--text-color-light-mode);
+}
 
 /* Headers */
 h1 {
