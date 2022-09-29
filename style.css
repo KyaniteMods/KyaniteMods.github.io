@@ -127,12 +127,6 @@ body * {
 	color: var(--text-color-light-mode);
 }
 
-.light-mode #topbar a:hover, .light-mode #topbar-small a:hover {
-	color: var(--text-color-light-mode);
-	font-size: 19px;
-	text-shadow: 0.125em 0.125em #dddddd;
-}
-
 #topbar a {
 	text-align: center;
 	padding: 0;
@@ -155,10 +149,6 @@ body * {
 .topbar-item:hover .topbar-text, .topbar-item:hover .topbar-icon {
 	font-size: 20px;
 }
-  
-.light-mode .topbar-item:hover .topbar-text {
-	font-size: 20px;
-}
 
 #topbar img {
 	text-align: center;
@@ -177,22 +167,6 @@ body * {
 .topbar-kyanite-logo {
 	height: 50px;
 	transform: translateY(-25%);
-}
-  
-.topbar-image {
-	transition: width 0.5s, height 0.5s;
-	width: 27px;
-	height: 27px;
-	image-rendering: pixelated;
-	top: 5px;
-}
-  
-.light-mode .topbar-image {
-	filter: invert(1);
-}
-  
-#topbar-small .topbar-image {
-	margin-bottom: 20px;
 }
   
 #topbar-small .topbar-kyanite-logo {
@@ -672,14 +646,22 @@ h4 {
 
 .post-image {
 	width: 80%;
-	border: 2px solid #000;
+	border-radius: 2px;
 	image-rendering: pixelated;
+	box-shadow: 0 0 5px #000000;
 }
 
 .post-text {
 	margin-left: auto;
 	margin-right: auto;
-	width: 75%;
+	width: 80%;
+	padding: 5px 0;
+}
+
+.post-text > div {
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 #author {
