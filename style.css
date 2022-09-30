@@ -232,10 +232,9 @@ h2 {
 
 h4 {
 	font-family: 'Minecraft';
-	font-size: 20px;
+	font-size: 18px;
 	color: #ffffff;
-	text-shadow: -0.1em -0.1em #000000, 0 -0.1em #000000, 0.1em -0.1em #000000, -0.1em 0 #000000, 0.1em 0 #000000, -0.1em 0.1em #000000, 0 0.1em #000000, 0.1em 0.1em #000000;
-	text-transform: uppercase;
+	text-shadow: 2px 2px 3px #000, 1px 1px 7px #000;
 	-webkit-font-smoothing: none;
 }
 
