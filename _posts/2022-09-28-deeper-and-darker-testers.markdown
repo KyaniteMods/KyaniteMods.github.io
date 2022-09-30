@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deeper and Darker Testers"
+title:  "Deeper And Darker Testers"
 subtitle: "You can now apply to test future versions of the mod!"
 permalink: /post/deeper-and-darker-testers
 
