@@ -211,6 +211,7 @@ body * {
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	text-shadow: 0 0 5px #000000;
 	display: none;
+	transition: font-size 0.25s;
 }
 
 .mod-dropdown-box {
