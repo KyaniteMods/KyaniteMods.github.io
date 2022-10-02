@@ -656,8 +656,7 @@ h4 {
 	position: relative;
     height: 0;
     padding-top: 175px;
-    width: 350px;
-    max-width: 90%;
+    width: 100%;
     overflow: hidden;
     display: inline-block;
 	border-radius: 5px;
@@ -695,7 +694,10 @@ h4 {
 }
 
 .news-posts {
-	text-align: center;
+	display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 5px;
+    justify-items: center;
 }
 
 .post-image {
@@ -770,6 +772,10 @@ h4 {
 	.wrapper {
 		width: 90%;
 	}
+	
+	.news-posts {
+		grid-template-columns: repeat(2, 2fr);
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -789,8 +795,8 @@ h4 {
 		top: 5px;
 	}
 	
-	.grid-2-items {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
+	.news-posts {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
 
