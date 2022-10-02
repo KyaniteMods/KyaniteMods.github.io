@@ -3,11 +3,11 @@ layout: default
 title: {{ page.title }}
 ---
 
-<div class="grid-2-items gap-15"><div style="display: inline-block; margin-left: auto;"><img src="{{ page.mod-image }}" class="mod-image"></div><div style="display:flex; align-items:center; margin-right: auto; width: 400px;"><div style="display: inline-block;"><h2 style="display: inline;">{{ page.title }}</h2><p style="font-size: 20px;">{{ page.description }}</p></div></div></div>
+<div class="grid-2-items gap-15"><div style="display: inline-block;"><img src="{{ page.mod-image }}" class="mod-image"></div><div style="display:flex; align-items:center; width: 400px;"><div style="display: inline-block;"><h2 style="display: inline;">{{ page.title }}</h2><p style="font-size: 20px;">{{ page.description }}</p></div></div></div>
 <h1>A Look Into The Game</h1>
-<div class="grid-2-items gap-15"><img src="{{ page.image1 }}" style="width: 500px; margin-left: auto;">
-<img src="{{ page.image2 }}" style="width: 500px;">
-<img src="{{ page.image3 }}" style="width: 500px; margin-left: auto;">
-<img src="{{ page.image4 }}" style="width: 500px;"></div>
+<div class="grid-2-items gap-15 fit-wrapper"><img src="{{ page.image1 }}" style="width: 100%;">
+<img src="{{ page.image2 }}" style="width: 100%;">
+<img src="{{ page.image3 }}" style="width: 100%;">
+<img src="{{ page.image4 }}" style="width: 100%;"></div>
 <h1>Links</h1>
 {% if page.curseforge %}<a href="{{ page.curseforge }}"><div class="curseforge-button"></div></a>{% endif %} {% if page.modrinth %}<a href="{{ page.modrinth }}"><div class="modrinth-button"></div></a>{% endif %} {% if page.github %}<a href="{{ page.github }}"><div class="github-button"></div></a>{% endif %}

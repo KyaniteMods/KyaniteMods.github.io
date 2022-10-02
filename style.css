@@ -80,13 +80,17 @@ body * {
 	text-align: left;
 }
 
-#wrapper {
+.wrapper {
 	padding-top: 100px;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
 }
 
 .light-mode {
 	color: var(--text-color-light-mode);
+	background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("/assets/background-blocks/light-mode/white_concrete.png");
 }
 
 .minecraft-emoji {
@@ -347,15 +351,13 @@ h4 {
 	color: var(--text-color-light-mode);
 }
 
-.mod-left {
-	width: 1000px;
-	margin-left: 50px;
+.mod-left, .mod-right {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mod-right {
-	width: 1000px;
-	margin-left: auto;
-	margin-right: 50px;
 	text-align: right;
 }
 
@@ -726,13 +728,13 @@ h4 {
 }
 
 /* General classes */
-
 .grid-2-items {
 	margin-left: auto;
 	margin-right: auto;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	text-align: center;
+	width: max-content;
 }
 
 .gap-5 {
@@ -745,6 +747,10 @@ h4 {
 
 .gap-15 {
 	gap: 15px;
+}
+
+.fit-wrapper {
+	width: 100%;
 }
 
 /* Compatibility with smaller screens */
@@ -771,6 +777,10 @@ h4 {
 	.card {
 		width: 90%;
 	}
+	
+	.wrapper {
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -788,6 +798,10 @@ h4 {
 	
 	#light-mode-button {
 		top: 5px;
+	}
+	
+	.grid-2-items {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 }
 
