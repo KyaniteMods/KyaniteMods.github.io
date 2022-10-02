@@ -699,7 +699,7 @@ h4 {
 }
 
 .post-image {
-	width: 80%;
+	width: 100%;
 	border-radius: 2px;
 	image-rendering: pixelated;
 	box-shadow: 0 0 5px #000000;
@@ -708,7 +708,7 @@ h4 {
 .post-text {
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 100%;
 	padding: 5px 0;
 }
 
@@ -721,7 +721,7 @@ h4 {
 	display: block;
 	height: 64px;
 	margin-top: 5px;
-	width: 80%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -765,16 +765,6 @@ h4 {
 	.card-description {
 		margin-left: 5px;
 		padding-left: 0;
-	}
-	
-	.mod-left, .mod-right {
-		margin-left: auto;
-		margin-right: auto;
-		width: 90%;
-	}
-	
-	.card {
-		width: 90%;
 	}
 	
 	.wrapper {
@@ -822,32 +812,6 @@ h4 {
 	.item-wrapper::before {
 		content: '';
 		display: inline-block;
-	}
-}
-
-/* Compatibility with larger screens */
-@media screen and (min-width: 1900px) {
-	.mod-left, .mod-right {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	.post-image {
-		width: 1710px;
-	}
-}
-
-@media screen and (min-width: 1600px) {
-	.post-image {
-		width: 1440px;
-	}
-	
-	.post-text {
-		width: 1200px;
-	}
-	
-	#author {
-		width: 1440px;
 	}
 }
 
