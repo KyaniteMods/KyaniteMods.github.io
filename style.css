@@ -71,7 +71,7 @@ body {
 	background-color: #555555;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
 	margin: 0;
-	font-family: 'Atkinson Hyperlegible';
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
 	text-align: center;
 }
@@ -108,7 +108,7 @@ body * {
 	background-size: 64px;
 	text-align: center;
 	color: var(--text-color);
-	font-family: 'Minecraft';
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	text-shadow: 0.125em 0.125em #3f3f3f;
 	padding: 0 0;
 	position: fixed;
@@ -141,7 +141,7 @@ body * {
 	font-size: 18px;
     overflow: hidden;
 	color: var(--text-color);
-	font-family: 'Minecraft';
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	position: relative;
 	text-shadow: none;
 	display: inline-block;
@@ -163,7 +163,7 @@ body * {
 	font-size: 12px;
     overflow: hidden;
 	color: #ffffff;
-	font-family: 'Minecraft';
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	position: relative;
 }
 
@@ -244,7 +244,7 @@ body * {
 
 /* Headers */
 h1 {
-	font-family: 'Minecraft', sans-serif;
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
 	font-size: 40px;
 	text-align: center;
@@ -259,7 +259,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Minecraft', sans-serif;
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	font-size: 30px;
 	color: #ffffff;
 	text-shadow: -0.1em -0.1em #000000, 0 -0.1em #000000, 0.1em -0.1em #000000, -0.1em 0 #000000, 0.1em 0 #000000, -0.1em 0.1em #000000, 0 0.1em #000000, 0.1em 0.1em #000000;
@@ -268,7 +268,7 @@ h2 {
 }
 
 h4 {
-	font-family: 'Minecraft', sans-serif;
+	font-family: 'Minecraft', 'Atkinson Hyperlegible', sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	text-shadow: 2px 2px 3px #000, 1px 1px 7px #000;
@@ -309,7 +309,7 @@ h4 {
 	padding: 5px 15px;
 	margin: 10px;
 	box-shadow: 0 0 5px #000000;
-	font-family: 'Atkinson Hyperlegible';
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
 	font-size: 20px;
 	text-align: left;
@@ -505,7 +505,7 @@ h4 {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	font-family: 'Atkinson Hyperlegible';
+	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
 }
 
