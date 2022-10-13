@@ -9,5 +9,6 @@ title: {{ page.title }}
 <img src="{{ page.image2 }}" style="width: 100%;">
 <img src="{{ page.image3 }}" style="width: 100%;">
 <img src="{{ page.image4 }}" style="width: 100%;"></div>
+{{ content }}
 <h1>Links</h1>
 {% if page.curseforge %}<a href="{{ page.curseforge }}"><div class="curseforge-button"></div></a><link rel="preload" as="image" href="/assets/curseforge_button_hover.png">{% endif %}{% if page.modrinth %} <a href="{{ page.modrinth }}"><div class="modrinth-button"></div></a><link rel="preload" as="image" href="/assets/modrinth_button_hover.png">{% endif %} {% if page.github %}<a href="{{ page.github }}"><div class="github-button"></div></a><link rel="preload" as="image" href="/assets/github_button_hover.png">{% endif %} {% if page.crowdin %}<a href="{{ page.crowdin }}"><div class="crowdin-button"></div></a><link rel="preload" as="image" href="/assets/crowdin_button_hover.png">{% endif %}
