@@ -332,9 +332,10 @@ h4 {
 .mod-right .card-description {
 	margin-left: 0;
 	margin-right: 10px;
+	text-align: right;
 }
 
-.mod-right .card-description, .mod-right .card-description * {
+.mod-right h2 {
 	text-align: right;
 }
 
@@ -392,6 +393,14 @@ h4 {
   content: "";
   clear: both;
   display: table;
+}
+
+.hide-on-small-screen {
+	display: inline-block;
+}
+
+.show-on-small-screen {
+	display: none;
 }
 
 /* Social Media Buttons */
@@ -564,7 +573,7 @@ h4 {
   background-color: #4d4d4d;
 }
 
-/* Minecraft Item Wrapper */
+/* Minecraft slot */
 .item-wrapper {
 	display: inline;
 	margin-left: 8px;
@@ -574,25 +583,42 @@ h4 {
 	display: none;
 }
 
+.item-slot {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-image: url('/assets/minecraft_slot.png');
+	image-rendering: pixelated;
+	background-size: 36px;
+}
+
+.item-glow {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+	width: 32px;
+	height: 32px;
+	top: 2px;
+	left: 2px;
+	z-index: 3;
+}
+
+.item-slot:hover .item-glow, .item-glow:hover {
+	opacity: 1;
+}
+
 /* Minecraft Tips */
 .slot-item {
+  position: absolute;
   image-rendering: pixelated;
   width: 32px;
   z-index: 1;
   position: absolute;
   border: 2px solid transparent;
-  top: -2px;
-  left: -2px;
-}
-
-#item-glow {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  background-color: transparent;
-  z-index: 3;
-  display: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
 }
 
 #minecraft-tip {
@@ -777,6 +803,14 @@ h4 {
 	
 	.news-posts {
 		grid-template-columns: repeat(2, 2fr);
+	}
+	
+	.hide-on-small-screen {
+		display: none;
+	}
+
+	.show-on-small-screen {
+		display: inline-block;
 	}
 }
 

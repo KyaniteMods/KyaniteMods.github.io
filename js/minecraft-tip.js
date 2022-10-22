@@ -4,19 +4,6 @@ var itemGlow = document.getElementById("item-glow");
 $('.slot-item').mouseover(function(event) {
         var $PosTop = $(this).position().top;
         var $PosLeft = $(this).position().left;
-        $(itemGlow).insertAfter($(this)).css({display: 'block', top: $PosTop + 2, left: $PosLeft + 2});
-		$(itemGlow).attr("data-mctitle", $(this).attr("data-mctitle"));
-		if($(this).attr("data-mclore") != undefined) {
-			$(itemGlow).attr("data-mclore", $(this).attr("data-mclore"));
-		} else {
-			$(itemGlow).removeAttr("data-mclore");
-		}
-});
-$('.item-wrapper').mouseover(function() {
-        $(itemGlow).css("display", "block");
-});
-$('.item-wrapper').mouseout(function() {
-        $(itemGlow).css("display", "none");
 });
 
 $(".minecraft-item").mouseover(function(event) {
