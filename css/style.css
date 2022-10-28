@@ -604,6 +604,7 @@ h4 {
 	background-image: url('/assets/minecraft_slot.png');
 	image-rendering: pixelated;
 	background-size: 36px;
+	vertical-align: middle;
 }
 
 .item-glow {

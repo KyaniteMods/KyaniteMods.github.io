@@ -97,7 +97,7 @@ html {
 body {
 	background-color: var(--background-color);
 	margin: 0;
-	font-family: 'Atkinson Hyperlegible', sans-serif;
+	font-family: Segoe UI, 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
 	min-height: 100%;
 	min-width: 100%;
@@ -120,7 +120,7 @@ body {
 	display: inline-block;
 	line-height: 1.5;
 	padding: 0;
-	vertical-align: middle;
+	font-weight: 500;
 }
 
 .topbar-dark-mode-button {

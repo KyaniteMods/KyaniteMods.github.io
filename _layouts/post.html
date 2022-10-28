@@ -52,7 +52,11 @@ layout: default
 	{%- endfor -%}
 {%- endif -%}
 
-{% assign content = post.content | strip_newlines %}
+{% assign content = content | strip_newlines %}
 {%- if content != "" -%}
-	<div class="card post-text">{{ content }}</div>
+	<div class="card post-text">
+		<div>
+			{{ content }}
+		</div>
+	</div>
 {%- endif -%}
