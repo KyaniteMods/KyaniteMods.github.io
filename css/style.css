@@ -5,27 +5,27 @@
 
 @font-face {
 	font-family: 'Minecraft Emoji';
-	src: url("assets/Minecraft-Emoji/Minecraft-Emoji.eot?") format("embedded-opentype"),
-	     url("assets/Minecraft-Emoji/Minecraft-Emoji.ttf") format("truetype"),
-		 url("assets/Minecraft-Emoji/Minecraft-Emoji.woff") format("woff"),
-		 url("assets/Minecraft-Emoji/Minecraft-Emoji.woff2") format("woff2");
+	src: url("/assets/Minecraft-Emoji/Minecraft-Emoji.eot?") format("embedded-opentype"),
+	     url("/assets/Minecraft-Emoji/Minecraft-Emoji.ttf") format("truetype"),
+		 url("/assets/Minecraft-Emoji/Minecraft-Emoji.woff") format("woff"),
+		 url("/assets/Minecraft-Emoji/Minecraft-Emoji.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: 'Minecraft';
-	src: url("assets/Minecraft-Font/Minecraft.eot?") format("embedded-opentype"),
-	     url("assets/Minecraft-Font/Minecraft.ttf") format("truetype"),
-		 url("assets/Minecraft-Font/Minecraft.woff") format("woff"),
-		 url("assets/Minecraft-Font/Minecraft.woff2") format("woff2");
+	src: url("/assets/Minecraft-Font/Minecraft.eot?") format("embedded-opentype"),
+	     url("/assets/Minecraft-Font/Minecraft.ttf") format("truetype"),
+		 url("/assets/Minecraft-Font/Minecraft.woff") format("woff"),
+		 url("/assets/Minecraft-Font/Minecraft.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
-	src: url("assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Regular-102.eot?") format("embedded-opentype"),
-	     url("assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Regular-102.woff") format("woff"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"),
-		 url("assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Regular-102.svg") format("svg");
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Regular-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Regular-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Regular-102.svg") format("svg");
 		 
 	font-weight: normal;
 	font-style: normal;
@@ -33,11 +33,11 @@
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
-	src: url("assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Bold-102.eot?") format("embedded-opentype"),
-	     url("assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Bold-102.woff") format("woff"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"),
-		 url("assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Bold-102.svg") format("svg");
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Bold-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Bold-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Bold-102.svg") format("svg");
 		 
 	font-weight: bold;
 	font-style: normal;
@@ -45,11 +45,11 @@
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
-	src: url("assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("embedded-opentype"),
-	     url("assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"),
-		 url("assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-BoldItalic-102.svg") format("svg");
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-BoldItalic-102.svg") format("svg");
 		 
 	font-weight: bold;
 	font-style: italic;
@@ -57,11 +57,11 @@
 
 @font-face {
 	font-family: 'Atkinson Hyperlegible';
-	src: url("assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Italic-102.eot?") format("embedded-opentype"),
-	     url("assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Italic-102.woff") format("woff"),
-		 url("assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"),
-		 url("assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Italic-102.svg") format("svg");
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Italic-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Italic-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Italic-102.svg") format("svg");
 		 
 	font-weight: normal;
 	font-style: italic;
@@ -69,7 +69,7 @@
 
 body {
 	background-color: #555555;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/background-blocks/dark-mode/deepslate_tiles.png");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/background-blocks/dark-mode/deepslate_tiles.png");
 	margin: 0;
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-color);
@@ -99,11 +99,11 @@ body * {
 
 /* Topbar */
 .light-mode .topbar, .light-mode .topbar-small {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("assets/background-blocks/light-mode/white_concrete_powder.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/assets/background-blocks/light-mode/white_concrete_powder.png");
 }
 
 .topbar, .topbar-small {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('/assets/background-blocks/dark-mode/sculk.png');
 	width: 100%;
 	background-size: 64px;
 	text-align: center;
@@ -223,14 +223,14 @@ body * {
 	margin-top: 80px;
 	text-align: center;
 	background-color: #000;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk_stone_bricks.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/assets/background-blocks/dark-mode/sculk_stone_bricks.png');
 	box-shadow: 0 0 5px #000000;
 	border-radius: 5px;
 }
 
 .light-mode .mod-dropdown-box {
 	background-color: #fff;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("/assets/background-blocks/light-mode/white_wool.png");
 	box-shadow: 0 0 5px #555555;
 }
 
@@ -278,7 +278,7 @@ h4 {
 /* Light Mode Button */
 #light-mode-button {
 	position: absolute;
-	background-image: url("assets/light_mode_button.png");
+	background-image: url("/assets/light_mode_button.png");
 	background-size: 60px;
 	image-rendering: pixelated;
 	cursor: pointer;
@@ -290,20 +290,20 @@ h4 {
 }
 
 #light-mode-button:hover {
-	background-image: url("assets/light_mode_button_hover.png");
+	background-image: url("/assets/light_mode_button_hover.png");
 }
 
 .light-mode #light-mode-button {
-	background-image: url("assets/dark_mode_button.png");
+	background-image: url("/assets/dark_mode_button.png");
 }
 
 .light-mode #light-mode-button:hover {
-	background-image: url("assets/dark_mode_button_hover.png");
+	background-image: url("/assets/dark_mode_button_hover.png");
 }
 
 /* Cards */
 .card {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('assets/background-blocks/dark-mode/sculk_stone_bricks.png');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/assets/background-blocks/dark-mode/sculk_stone_bricks.png');
 	background-size: 64px;
 	border-radius: 2px;
 	padding: 5px 15px;
@@ -317,7 +317,7 @@ h4 {
 }
 
 .light-mode .card {
-	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("assets/background-blocks/light-mode/white_wool.png");
+	background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.9)), url("/assets/background-blocks/light-mode/white_wool.png");
 	box-shadow: 0 0 5px #555555;
 }
 
@@ -414,7 +414,7 @@ h4 {
 
 .discord-button-large {
 	display: inline-block;
-	background-image: url("assets/discord_button_large.png");
+	background-image: url("/assets/discord_button_large.png");
 	background-size: cover;
 	image-rendering: pixelated;
 	width: 357px;
@@ -422,71 +422,71 @@ h4 {
 }
 
 .discord-button-large:hover {
-	background-image: url("assets/discord_button_large_hover.png");
+	background-image: url("/assets/discord_button_large_hover.png");
 }
 
 .github-button {
-	background-image: url("assets/github_button.png");
+	background-image: url("/assets/github_button.png");
 }
 
 .github-button:hover {
-	background-image: url("assets/github_button_hover.png");
+	background-image: url("/assets/github_button_hover.png");
 }
 
 .youtube-button {
-	background-image: url("assets/youtube_button.png");
+	background-image: url("/assets/youtube_button.png");
 }
 
 .youtube-button:hover {
-	background-image: url("assets/youtube_button_hover.png");
+	background-image: url("/assets/youtube_button_hover.png");
 }
 
 .twitter-button {
-	background-image: url("assets/twitter_button.png");
+	background-image: url("/assets/twitter_button.png");
 }
 
 .twitter-button:hover {
-	background-image: url("assets/twitter_button_hover.png");
+	background-image: url("/assets/twitter_button_hover.png");
 }
 
 .discord-button {
-	background-image: url("assets/discord_button.png");
+	background-image: url("/assets/discord_button.png");
 }
 
 .discord-button:hover {
-	background-image: url("assets/discord_button_hover.png");
+	background-image: url("/assets/discord_button_hover.png");
 }
 
 .email-button {
-	background-image: url("assets/email_button.png");
+	background-image: url("/assets/email_button.png");
 }
 
 .email-button:hover {
-	background-image: url("assets/email_button_hover.png");
+	background-image: url("/assets/email_button_hover.png");
 }
 
 .curseforge-button {
-	background-image: url("assets/curseforge_button.png");
+	background-image: url("/assets/curseforge_button.png");
 }
 
 .curseforge-button:hover {
-	background-image: url("assets/curseforge_button_hover.png");
+	background-image: url("/assets/curseforge_button_hover.png");
 }
 
 .modrinth-button {
-	background-image: url("assets/modrinth_button.png");
+	background-image: url("/assets/modrinth_button.png");
 }
 
 .modrinth-button:hover {
-	background-image: url("assets/modrinth_button_hover.png");
+	background-image: url("/assets/modrinth_button_hover.png");
 }
 
 .crowdin-button {
-	background-image: url("assets/crowdin_button.png");
+	background-image: url("/assets/crowdin_button.png");
 }
 
 .crowdin-button:hover {
-	background-image: url("assets/crowdin_button_hover.png");
+	background-image: url("/assets/crowdin_button_hover.png");
 }
 
 /* Minecraft Button */
@@ -495,7 +495,7 @@ h4 {
     color: #ffffff;
     text-align: center;
     text-shadow: 0.125em 0.125em #3f3f3f;
-    background-image: url(assets/minecraft_button.png);
+    background-image: url('/assets/minecraft_button.png');
     background-size: cover;
     image-rendering: pixelated;
     width: 300px;
@@ -507,7 +507,7 @@ h4 {
 }
 
 .minecraft-button:hover {
-	background-image: url("assets/minecraft_button_hover.png");
+	background-image: url("/assets/minecraft_button_hover.png");
 }
 
 /* Footer */
@@ -621,35 +621,32 @@ h4 {
   pointer-events: none;
 }
 
-#minecraft-tip {
-  position: fixed;
-  left: 0;
-  top: 0;
-  border: 0.125em solid #2D0A63;
-  border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
-  border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
-  background-color: rgba(16,0,16,0.94);
-  color: #ffffff;
-  text-shadow: 0.125em 0.125em 0 #3F3F3F;
-  padding: 0.375em;
-  font-family: Minecraft,"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif;
-  word-spacing: 0.25em;
-  margin: 0.125em 0.25em;
-  padding-top: 0;
-  padding-bottom: 0.375em;
-  line-height: 1.125em;
-  z-index: 9999;
-  white-space: nowrap;
-  display: none;
+.minecraft-tip {
+	position: fixed;
+	z-index: 9999;
+	display: none;
+	color: #ffffff;
+	left: 0;
+	top: 0;
+	border: 0.125em solid #2D0A63;
+	border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+	border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+	background-color: rgba(16,0,16,0.94);
+	font-family: Minecraft,"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif;
+	word-spacing: 0.25em;
+	margin: 0.125em 0.25em;
+	padding-left: 0.375em;
+	padding-bottom: 0.375em;
+	padding-right: 0.25em;
+	padding-top: 0;
+	padding: 0 0.375em 0.375em 0.375em;
+	line-height: 1.125em;
+	white-space: nowrap;
+	font-size: initial;
+	text-align: left;
 }
 
-#minecraft-tip br {
-  display: block;
-  content: "";
-  margin-top: 0.25em;
-}
-
-#minecraft-tip::before {
+.minecraft-tip::before {
   content: '';
   position: absolute;
   top: -0.125em;
@@ -660,7 +657,7 @@ h4 {
   border-style: none solid;
 }
 
-#minecraft-tip::after {
+.minecraft-tip::after {
   content: '';
   position: absolute;
   top: -0.250em;
@@ -669,6 +666,245 @@ h4 {
   left: -0.125em;
   border: 0.125em solid rgba(16,0,16,0.94);
   border-style: solid none;
+}
+
+.minecraft-lore {
+	color: #aaaaaa;
+	text-shadow: 0.125em 0.125em #2a2a2a;
+}
+
+.shadow-line {
+	color: #3f3f3f;
+}
+
+.empty-line {
+  display: block;
+  content: "";
+  margin-top: 1.625em;
+}
+
+.break {
+  display: block;
+  content: "";
+  margin-top: 0.25em;
+}
+
+.shadow-line .c-0 {
+  color: #000000;
+}
+
+.shadow-line .c-1 {
+  color: #00002a;
+}
+
+.shadow-line .c-2 {
+  color: #002a00;
+}
+
+.shadow-line .c-3 {
+  color: #002a2a;
+}
+
+.shadow-line .c-4 {
+  color: #2a0000;
+}
+
+.shadow-line .c-5 {
+  color: #2a002a;
+}
+
+.shadow-line .c-6 {
+  color: #2a2a00;
+}
+
+.shadow-line .c-6-bedrock {
+  color: #402a00;
+}
+
+.shadow-line .c-7 {
+  color: #2a2a2a;
+}
+
+.shadow-line .c-8 {
+  color: #151515;
+}
+
+.shadow-line .c-9 {
+  color: #15153f;
+}
+
+.shadow-line .c-a {
+  color: #153f15;
+}
+
+.shadow-line .c-b {
+  color: #153f3f;
+}
+
+.shadow-line .c-c {
+  color: #3f1515;
+}
+
+.shadow-line .c-d {
+  color: #3f153f;
+}
+
+.shadow-line .c-e {
+  color: #3f3f15;
+}
+
+.shadow-line .c-f {
+  color: #3f3f3f;
+}
+
+.shadow-line .c-g {
+  color: #373501;
+}
+
+.c-l {
+  font-weight: bold;
+}
+
+.c-o {
+  font-style: italic;
+}
+
+.c-0 {
+  color: #000000;
+}
+
+.c-1 {
+  color: #0000aa;
+}
+
+.c-2 {
+  color: #00aa00;
+}
+
+.c-3 {
+  color: #00aaaa;
+}
+
+.c-4 {
+  color: #aa0000;
+}
+
+.c-5 {
+  color: #aa00aa;
+}
+
+.c-6 {
+  color: #ffaa00;
+}
+
+.c-6-bedrock {
+  color: #ffaa00;
+}
+
+.c-7 {
+  color: #aaaaaa;
+}
+
+.c-8 {
+  color: #555555;
+}
+
+.c-9 {
+  color: #5555ff;
+}
+
+.c-a {
+  color: #55ff55;
+}
+
+.c-b {
+  color: #55ffff;
+}
+
+.c-c {
+  color: #ff5555;
+}
+
+.c-d {
+  color: #ff55ff;
+}
+
+.c-e {
+  color: #ffff55;
+}
+
+.c-f {
+  color: #ffffff;
+}
+
+.c-g {
+  color: #ddd605;
+}
+
+.c-m {
+	position: relative;
+}
+
+.c-m:after {
+    content: '';
+    display: block;
+    width: calc(100% + 0.125em);
+    height: 0;
+	margin-top: 0.925em;
+    position: absolute;
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+	z-index: 1;
+}
+
+.shadow-line .c-m:after {
+    width: calc(100% + 0.125em);
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+}
+
+.c-m .c-0:after, .c-m .c-1:after, .c-m .c-2:after, .c-m .c-3:after, .c-m .c-4:after, .c-m .c-5:after, .c-m .c-6:after, .c-m .c-7:after, .c-m .c-8:after, .c-m .c-9:after, .c-m .c-a:after, .c-m .c-b:after, .c-m .c-c:after, .c-m .c-d:after, .c-m .c-e:after, .c-m .c-f:after, .c-m .c-g:after, .c-m .c-6-bedrock:after {
+    content: '';
+    display: block;
+    width: calc(100% + 0.125em);
+    height: 0;
+	margin-top: 0.925em;
+    position: absolute;
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+	z-index: 2;
+}
+
+.c-n {
+	position: relative;
+	text-decoration: underline 0.125em;
+	text-underline-offset: 0.125em;
+}
+
+.c-n .c-1, .c-n .c-2, .c-n .c-3, .c-n .c-4, .c-n .c-5, .c-n .c-6, .c-n .c-7, .c-n .c-8, .c-n .c-9, .c-n .c-a, .c-n .c-b, .c-n .c-c, .c-n .c-d, .c-n .c-e, .c-n .c-f, .c-n .c-g, .c-n .c-h {
+	text-decoration: underline 0.125em;
+}
+
+.c-1, .c-2, .c-3, .c-4, .c-5, .c-6, .c-7, .c-8, .c-9, .c-a, .c-b, .c-c, .c-d, .c-e, .c-f, .c-g, .c-h {
+	position: relative;
+	font-family: Minecraft;
+	font-size: initial;
+}
+
+.tip-line {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+}
+
+.shadow-line {
+	position: absolute;
+    left: 0.5em;
+    top: 0.125em;
+    z-index: -1;
 }
 
 /* Mod pages */
