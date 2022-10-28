@@ -1,0 +1,502 @@
+:root {
+	--text-color: #ffffff;
+	--text-color-light-mode: #000000;
+	--button-text-color: #ffffff;
+	--button-text-color-light-mode: #000000;
+	--background-color: #333333;
+	--background-color-light-mode: #efefef;
+	--topbar-color: #222222;
+	--topbar-color-light-mode: #cccccc;
+	--button-color: #010101;
+	--button-hover-color: #111111;
+	--button-color-light-mode: #bbbbbb;
+	--button-hover-color-light-mode: #bcbcbc;
+}
+
+@font-face {
+	font-family: 'Minecraft Emoji';
+	src: url("/assets/Minecraft-Emoji/Minecraft-Emoji.eot?") format("embedded-opentype"),
+	     url("/assets/Minecraft-Emoji/Minecraft-Emoji.ttf") format("truetype"),
+		 url("/assets/Minecraft-Emoji/Minecraft-Emoji.woff") format("woff"),
+		 url("/assets/Minecraft-Emoji/Minecraft-Emoji.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url("/assets/Minecraft-Font/Minecraft.eot?") format("embedded-opentype"),
+	     url("/assets/Minecraft-Font/Minecraft.ttf") format("truetype"),
+		 url("/assets/Minecraft-Font/Minecraft.woff") format("woff"),
+		 url("/assets/Minecraft-Font/Minecraft.woff2") format("woff2");
+		 
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Minecraft';
+	src: url("/assets/Minecraft-Font/Minecraft-Bold.eot?") format("embedded-opentype"),
+	     url("/assets/Minecraft-Font/Minecraft-Bold.ttf") format("truetype"),
+		 url("/assets/Minecraft-Font/Minecraft-Bold.woff") format("woff"),
+		 url("/assets/Minecraft-Font/Minecraft-Bold.woff2") format("woff2");
+		 
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Regular-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Regular-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Regular-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Regular-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Regular-102.svg") format("svg");
+		 
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Bold-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Bold-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Bold-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Bold-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Bold-102.svg") format("svg");
+		 
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-BoldItalic-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-BoldItalic-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-BoldItalic-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-BoldItalic-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-BoldItalic-102.svg") format("svg");
+		 
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	src: url("/assets/Atkinson-Hyperlegible-Font/EOT/Atkinson-Hyperlegible-Italic-102.eot?") format("embedded-opentype"),
+	     url("/assets/Atkinson-Hyperlegible-Font/TTF/Atkinson-Hyperlegible-Italic-102.ttf") format("truetype"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF/Atkinson-Hyperlegible-Italic-102.woff") format("woff"),
+		 url("/assets/Atkinson-Hyperlegible-Font/WOFF2/Atkinson-Hyperlegible-Italic-102.woff2") format("woff2"),
+		 url("/assets/Atkinson-Hyperlegible-Font/SVG/Atkinson-Hyperlegible-Italic-102.svg") format("svg");
+		 
+	font-weight: normal;
+	font-style: italic;
+}
+
+html {
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+body {
+	background-color: var(--background-color);
+	margin: 0;
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	color: var(--text-color);
+	min-height: 100%;
+	min-width: 100%;
+}
+
+.topbar {
+	position: relative;
+	width: calc(100% - 30px);
+	height: 60px;
+	line-height: 60px;
+	background-color: var(--topbar-color);
+	padding: 0 15px 0 15px;
+}
+
+.light-mode .topbar {
+	background-color: var(--topbar-color-light-mode);
+}
+
+.topbar-text {
+	display: inline-block;
+	line-height: 1.5;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.topbar-dark-mode-button {
+	display: inline-block;
+	float: right;
+}
+
+.topbar img {
+	float: left;
+	height: 60px;
+}
+
+.content {
+	max-width: 100%;
+	padding: 25px 25px 45px 25px;
+}
+
+.light-mode {
+	color: var(--text-color-light-mode);
+	background-color: var(--background-color-light-mode);
+}
+
+/* Button */
+button {
+	background-color: var(--button-color);
+	color: var(--button-text-color);
+	border-radius: 5px;
+	padding: 5px 7px 5px 7px;
+	border-color: transparent;
+	font-family: inherit;
+}
+
+button:hover {
+	background-color: transparent;
+	border-color: var(--button-hover-color);
+}
+
+.light-mode button {
+	background-color: var(--button-color-light-mode);
+}
+
+.light-mode button:hover {
+	background-color: transparent;
+	border-color: var(--button-hover-color-light-mode);
+}
+
+/* Minecraft slot */
+.item-wrapper {
+	display: inline;
+	margin-left: 8px;
+}
+
+.item-wrapper-br {
+	display: none;
+}
+
+.item-slot {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-image: url('/assets/minecraft_slot.png');
+	image-rendering: pixelated;
+	background-size: 36px;
+}
+
+.item-glow {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+	width: 32px;
+	height: 32px;
+	top: 2px;
+	left: 2px;
+	z-index: 3;
+}
+
+.item-slot:hover .item-glow, .item-glow:hover {
+	opacity: 1;
+}
+
+/* Minecraft Tips */
+.slot-item {
+  position: absolute;
+  image-rendering: pixelated;
+  width: 32px;
+  z-index: 1;
+  position: absolute;
+  border: 2px solid transparent;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+
+.minecraft-tip {
+	position: fixed;
+	z-index: 9999;
+	display: none;
+	color: #ffffff;
+	left: 0;
+	top: 0;
+	border: 0.125em solid #2D0A63;
+	border-image: -webkit-linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+	border-image: linear-gradient(rgba(80,0,255,0.31),rgba(40,0,127,0.31)) 1;
+	background-color: rgba(16,0,16,0.94);
+	font-family: Minecraft,"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif;
+	word-spacing: 0.25em;
+	margin: 0.125em 0.25em;
+	padding-left: 0.375em;
+	padding-bottom: 0.375em;
+	padding-right: 0.25em;
+	padding-top: 0;
+	padding: 0 0.375em 0.375em 0.375em;
+	line-height: 1.125em;
+	white-space: nowrap;
+	font-size: initial;
+	text-align: left;
+}
+
+.minecraft-tip::before {
+  content: '';
+  position: absolute;
+  top: -0.125em;
+  right: -0.250em;
+  bottom: -0.125em;
+  left: -0.250em;
+  border: 0.125em solid rgba(16,0,16,0.94);
+  border-style: none solid;
+}
+
+.minecraft-tip::after {
+  content: '';
+  position: absolute;
+  top: -0.250em;
+  right: -0.125em;
+  bottom: -0.250em;
+  left: -0.125em;
+  border: 0.125em solid rgba(16,0,16,0.94);
+  border-style: solid none;
+}
+
+.minecraft-lore {
+	color: #aaaaaa;
+	text-shadow: 0.125em 0.125em #2a2a2a;
+}
+
+.shadow-line {
+	color: #3f3f3f;
+}
+
+.empty-line {
+  display: block;
+  content: "";
+  margin-top: 1.625em;
+}
+
+.break {
+  display: block;
+  content: "";
+  margin-top: 0.25em;
+}
+
+.shadow-line .c-0 {
+  color: #000000;
+}
+
+.shadow-line .c-1 {
+  color: #00002a;
+}
+
+.shadow-line .c-2 {
+  color: #002a00;
+}
+
+.shadow-line .c-3 {
+  color: #002a2a;
+}
+
+.shadow-line .c-4 {
+  color: #2a0000;
+}
+
+.shadow-line .c-5 {
+  color: #2a002a;
+}
+
+.shadow-line .c-6 {
+  color: #2a2a00;
+}
+
+.shadow-line .c-6-bedrock {
+  color: #402a00;
+}
+
+.shadow-line .c-7 {
+  color: #2a2a2a;
+}
+
+.shadow-line .c-8 {
+  color: #151515;
+}
+
+.shadow-line .c-9 {
+  color: #15153f;
+}
+
+.shadow-line .c-a {
+  color: #153f15;
+}
+
+.shadow-line .c-b {
+  color: #153f3f;
+}
+
+.shadow-line .c-c {
+  color: #3f1515;
+}
+
+.shadow-line .c-d {
+  color: #3f153f;
+}
+
+.shadow-line .c-e {
+  color: #3f3f15;
+}
+
+.shadow-line .c-f {
+  color: #3f3f3f;
+}
+
+.shadow-line .c-g {
+  color: #373501;
+}
+
+.c-l {
+  font-weight: bold;
+}
+
+.c-o {
+  font-style: italic;
+}
+
+.c-0 {
+  color: #000000;
+}
+
+.c-1 {
+  color: #0000aa;
+}
+
+.c-2 {
+  color: #00aa00;
+}
+
+.c-3 {
+  color: #00aaaa;
+}
+
+.c-4 {
+  color: #aa0000;
+}
+
+.c-5 {
+  color: #aa00aa;
+}
+
+.c-6 {
+  color: #ffaa00;
+}
+
+.c-6-bedrock {
+  color: #ffaa00;
+}
+
+.c-7 {
+  color: #aaaaaa;
+}
+
+.c-8 {
+  color: #555555;
+}
+
+.c-9 {
+  color: #5555ff;
+}
+
+.c-a {
+  color: #55ff55;
+}
+
+.c-b {
+  color: #55ffff;
+}
+
+.c-c {
+  color: #ff5555;
+}
+
+.c-d {
+  color: #ff55ff;
+}
+
+.c-e {
+  color: #ffff55;
+}
+
+.c-f {
+  color: #ffffff;
+}
+
+.c-g {
+  color: #ddd605;
+}
+
+.c-m {
+	position: relative;
+}
+
+.c-m:after {
+    content: '';
+    display: block;
+    width: calc(100% + 0.125em);
+    height: 0;
+	margin-top: 0.925em;
+    position: absolute;
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+	z-index: 1;
+}
+
+.shadow-line .c-m:after {
+    width: calc(100% + 0.125em);
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+}
+
+.c-m .c-0:after, .c-m .c-1:after, .c-m .c-2:after, .c-m .c-3:after, .c-m .c-4:after, .c-m .c-5:after, .c-m .c-6:after, .c-m .c-7:after, .c-m .c-8:after, .c-m .c-9:after, .c-m .c-a:after, .c-m .c-b:after, .c-m .c-c:after, .c-m .c-d:after, .c-m .c-e:after, .c-m .c-f:after, .c-m .c-g:after, .c-m .c-6-bedrock:after {
+    content: '';
+    display: block;
+    width: calc(100% + 0.125em);
+    height: 0;
+	margin-top: 0.925em;
+    position: absolute;
+    top: 0;
+    left: -0.125em;
+    border-bottom: 0.125em solid;
+	z-index: 2;
+}
+
+.c-n {
+	position: relative;
+	text-decoration: underline 0.125em;
+	text-underline-offset: 0.125em;
+}
+
+.c-n .c-1, .c-n .c-2, .c-n .c-3, .c-n .c-4, .c-n .c-5, .c-n .c-6, .c-n .c-7, .c-n .c-8, .c-n .c-9, .c-n .c-a, .c-n .c-b, .c-n .c-c, .c-n .c-d, .c-n .c-e, .c-n .c-f, .c-n .c-g, .c-n .c-h {
+	text-decoration: underline 0.125em;
+}
+
+.c-1, .c-2, .c-3, .c-4, .c-5, .c-6, .c-7, .c-8, .c-9, .c-a, .c-b, .c-c, .c-d, .c-e, .c-f, .c-g, .c-h {
+	position: relative;
+	font-family: Minecraft;
+	font-size: initial;
+}
+
+.tip-line {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+}
+
+.shadow-line {
+	position: absolute;
+    left: 0.5em;
+    top: 0.125em;
+    z-index: -1;
+}

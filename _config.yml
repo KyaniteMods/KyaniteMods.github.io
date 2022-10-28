@@ -31,6 +31,11 @@ github_username:  KyaniteMods
 theme: minima
 plugins:
   - jekyll-feed
+collections:
+  wiki:
+    output: true
+    permalink: /:collection/:name
+    layout: wiki
 
 # Exclude from processing.
 # The following items will not be processed, by default.
