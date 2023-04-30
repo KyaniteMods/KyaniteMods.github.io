@@ -990,6 +990,7 @@ h4 {
 	margin-right: auto;
 	width: 100%;
 	padding: 5px 0;
+	margin: 0;
 }
 
 .post-text > div {
@@ -999,11 +1000,24 @@ h4 {
 
 #author {
 	display: block;
-	height: 64px;
-	margin-top: 5px;
+	margin-bottom: 7px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#author-image {
+	image-rendering: pixelated;
+	width: 48px;
+	float: left;
+}
+
+#author-text {
+	padding-left: 60px;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 48px;
+	font-size: 20px;
 }
 
 /* General classes */

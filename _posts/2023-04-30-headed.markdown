@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Headed"
+subtitle: "More mob heads!"
+permalink: /post/headed
+
+author-image: /assets/team-members/pr_ib.png
+author: "pr_ib"
+
+header-image: /assets/post-images/headed.png
+
+links:
+  CurseForge: https://curseforge.com/minecraft/mc-mods/headed
+  Modrinth: https://modrinth.com/mod/headed
+
+main-text: "Headed is a mod which adds more mob heads to the game. Heads are acquired by killing charged creepers, just like in normal Minecraft."
+---

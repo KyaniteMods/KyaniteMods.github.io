@@ -15,10 +15,10 @@ layout: default
 	<div id="author">
 {%- endif -%}
 {%- if page.author-image -%}
-	<img src="{{ page.author-image }}" style="image-rendering: pixelated; width: 64px; float: left;">
+	<img src="{{ page.author-image }}" id="author-image">
 {%- endif -%}
 {%- if page.author -%}
-	<p style="padding-left: 74px; margin-top: 0; margin-bottom: 0; line-height: 64px; font-size: 20px;">Written by {{ page.author }}{%- if page.show-date != false -%}&#32;on {% assign d = page.date | date: "%d" | plus:'0' %}
+	<p id="author-text">Written by {{ page.author }}{%- if page.show-date != false -%}&#32;on {% assign d = page.date | date: "%d" | plus:'0' %}
       {{ page.date | date: "%B" }} 
       {% case d %}
         {% when 1 or 21 or 31 %}{{ d }}st
