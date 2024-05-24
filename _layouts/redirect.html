@@ -1,9 +1,10 @@
 <html>
 	<head>
 		<title>{%- if page.title -%}{{ page.title }}{%- else -%}Kyanite Mods{%- endif -%}</title>
-		<meta http-equiv="refresh" content="0; url =
-		{{ page.url }}" />
+		<meta http-equiv="refresh" content="0; url={{ page.redirect }}" />
 	</head>
 	<body>
+		<h1>Redirecting...</h1>
+		<p>If you are not redirected automatically, <a href="{{ page.redirect }}">click here</a>.</p>
 	</body>
 </html>
