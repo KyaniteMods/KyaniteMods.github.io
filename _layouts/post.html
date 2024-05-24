@@ -18,14 +18,7 @@ layout: default
 	<img src="{{ page.author-image }}" id="author-image">
 {%- endif -%}
 {%- if page.author -%}
-	<p id="author-text">Written by {{ page.author }}{%- if page.show-date != false -%}&#32;on {% assign d = page.date | date: "%d" | plus:'0' %}
-      {{ page.date | date: "%B" }} 
-      {% case d %}
-        {% when 1 or 21 or 31 %}{{ d }}st
-        {% when 2 or 22 %}{{ d }}nd
-        {% when 3 or 23 %}{{ d }}rd
-        {% else %}{{ d }}th{% endcase %}, 
-      {{ page.date | date: "%Y" }}{%- endif -%}</p>
+	<p id="author-text" data-string='{"translate":"post.written_by","with":[{"text":"{{ page.author }}"},{"translate":"date.long","with":[{"text":"{{ page.date | date: "%d" | plus:'0' }}"},{"translate":"month.{{ page.date | date: "%m" | plus:'0' }}"},{"text":"{{ page.date | date: "%Y" | plus:'0' }}"}]}]}'></p>
 {%- endif -%}
 {%- if page.author-image or page.author -%}
 	</div>
@@ -43,9 +36,9 @@ layout: default
 
 {%- if page.links -%}
 	{%- if page.links.size > 1 -%}
-		<h1>Links</h1>
+		<h1 data-string='{"translate":"category.post.links"}'>Links</h1>
 	{%- else -%}
-		<h1>Link</h1>
+		<h1 data-string='{"translate":"category.post.link"}'>Link</h1>
 	{%- endif -%}
 	{%- for item in page.links -%}
 			<a href="{{ item[1] }}"><div class="minecraft-button">{{ item[0] }}</div></a><br>
