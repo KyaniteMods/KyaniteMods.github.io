@@ -44,24 +44,21 @@
 			{{ content }}
 			<div id="footer">Kyanite Mods • kyanitemods@gmail.com</div>
 		</div>
-		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-		<script>
-			kofiWidgetOverlay.draw('nitro_dynamite18', {
-				'type': 'floating-chat',
-				'floating-chat.donateButton.text': 'Support Us',
-				'floating-chat.donateButton.background-color': '#794bc4',
-				'floating-chat.donateButton.text-color': '#fff'
-			});
-		</script>
   	</body>
   	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   	<script src="{{ site.baseurl }}/js/text.js"></script>
   	<script src="{{ site.baseurl }}/js/translate.js"></script>
-  	<script>
-		document.addEventListener("DOMContentLoaded", function(e) {
-			translate.reloadLoc();
-		});
-	</script>
   	<script src="{{ site.baseurl }}/js/minecraft-tip.js"></script>
   	<script src="{{ site.baseurl }}/js/dark-mode.js"></script>
+	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+	<script>
+		translate.addChangeListener(() => {
+			kofiWidgetOverlay.draw('nitro_dynamite18', {
+				'type': 'floating-chat',
+				'floating-chat.donateButton.text': translate.translateString("support_widget.title"),
+				'floating-chat.donateButton.background-color': '#794bc4',
+				'floating-chat.donateButton.text-color': '#fff'
+			});
+		});
+	</script>
 </html>

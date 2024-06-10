@@ -1,4 +1,4 @@
-class VanillaTooltipStyle {
+class JavaTooltipStyle {
   constructor() {
     this.paddingLeft = 4;
     this.paddingRight = 4;
@@ -7,7 +7,6 @@ class VanillaTooltipStyle {
     this.lineSpace = 2;
     this.fontSize = 8;
     this.wordSpacing = 4;
-    this.firstLineIsHigher = true;
     this.font = 'Minecraft';
     this.shadow = true;
   }
@@ -16,24 +15,29 @@ class VanillaTooltipStyle {
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "rgba(16,0,16,0.94)";
+    ctx.fillStyle = "rgba(16, 0, 16, 0.9411764705882353)";
   
-    ctx.fillRect(0, settings.pixelScale, 2 * settings.pixelScale, canvas.height - (2 * settings.pixelScale));
-    ctx.fillRect(canvas.width - (2 * settings.pixelScale), settings.pixelScale, canvas.width, canvas.height - (2 * settings.pixelScale));
-    ctx.fillRect(settings.pixelScale, 0, canvas.width - (2 * settings.pixelScale), settings.pixelScale);
-    ctx.fillRect(2 * settings.pixelScale, settings.pixelScale, canvas.width - (4 * settings.pixelScale), settings.pixelScale);
-    ctx.fillRect(settings.pixelScale, canvas.height - settings.pixelScale, canvas.width - (2 * settings.pixelScale), settings.pixelScale);
-    ctx.fillRect(2 * settings.pixelScale, canvas.height - (2 * settings.pixelScale), canvas.width - (4 * settings.pixelScale), settings.pixelScale);
+    let pixelScale = getSetting("pixelScale", canvas);
+    ctx.fillRect(0, pixelScale, 2 * pixelScale, canvas.height - (2 * pixelScale));
+    ctx.fillRect(canvas.width - (2 * pixelScale), pixelScale, canvas.width, canvas.height - (2 * pixelScale));
+    ctx.fillRect(pixelScale, 0, canvas.width - (2 * pixelScale), pixelScale);
+    ctx.fillRect(2 * pixelScale, pixelScale, canvas.width - (4 * pixelScale), pixelScale);
+    ctx.fillRect(pixelScale, canvas.height - pixelScale, canvas.width - (2 * pixelScale), pixelScale);
+    ctx.fillRect(2 * pixelScale, canvas.height - (2 * pixelScale), canvas.width - (4 * pixelScale), pixelScale);
   
     let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-    gradient.addColorStop(0, "rgba(80,0,255,0.31)");
-    gradient.addColorStop(1, "rgba(40,0,127,0.31)");
+    gradient.addColorStop(0, "rgba(50, 0, 255, 0.3137254901960784)");
+    gradient.addColorStop(1, "rgba(40, 0, 127, 0.3137254901960784)");
     ctx.fillStyle = gradient;
-    ctx.fillRect(settings.pixelScale, settings.pixelScale, canvas.width - (2 * settings.pixelScale), canvas.height - (2 * settings.pixelScale));
-    ctx.clearRect(2 * settings.pixelScale, 2 * settings.pixelScale, canvas.width - (4 * settings.pixelScale), canvas.height - (4 * settings.pixelScale));
+    ctx.fillRect(pixelScale, pixelScale, canvas.width - (2 * pixelScale), canvas.height - (2 * pixelScale));
+    ctx.clearRect(2 * pixelScale, 2 * pixelScale, canvas.width - (4 * pixelScale), canvas.height - (4 * pixelScale));
   
-    ctx.fillStyle = "rgba(16,0,16,0.94)";
-    ctx.fillRect(2 * settings.pixelScale, 2 * settings.pixelScale, canvas.width - (4 * settings.pixelScale), canvas.height - (4 * settings.pixelScale));
+    ctx.fillStyle = "rgba(16, 0, 16, 0.9411764705882353)";
+    ctx.fillRect(2 * pixelScale, 2 * pixelScale, canvas.width - (4 * pixelScale), canvas.height - (4 * pixelScale));
+  }
+
+  getLineHeight(line) {
+    return line == 1 ? this.fontSize + this.lineSpace + 2 : this.fontSize + this.lineSpace;
   }
 }
 
@@ -46,7 +50,6 @@ class BetaTooltipStyle {
     this.lineSpace = 2;
     this.fontSize = 8;
     this.wordSpacing = 4;
-    this.firstLineIsHigher = true;
     this.font = 'Minecraft';
     this.shadow = true;
   }
@@ -57,6 +60,40 @@ class BetaTooltipStyle {
     
     ctx.fillStyle = "rgba(0,0,0,0.7529411765)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  getLineHeight(line) {
+    return line == 1 ? this.fontSize + this.lineSpace + 2 : this.fontSize + this.lineSpace;
+  }
+}
+
+class BedrockTooltipStyle {
+  constructor() {
+    this.paddingLeft = 4;
+    this.paddingRight = 4;
+    this.paddingTop = 3;
+    this.paddingBottom = 3;
+    this.lineSpace = 2;
+    this.fontSize = 8;
+    this.wordSpacing = 4;
+    this.font = 'Minecraft';
+    this.shadow = true;
+  }
+
+  render(canvas) {
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "rgba(0,0,0,0.5)";
+  
+    let pixelScale = getSetting("pixelScale", canvas);
+    ctx.fillRect(0, pixelScale, pixelScale, canvas.height - (2 * pixelScale));
+    ctx.fillRect(pixelScale, 0, canvas.width - (2 * pixelScale), canvas.height);
+    ctx.fillRect(canvas.width - pixelScale, pixelScale, pixelScale, canvas.height - (2 * pixelScale));
+  }
+
+  getLineHeight(line) {
+    return line == 1 ? this.fontSize + this.lineSpace + 2 : this.fontSize + this.lineSpace;
   }
 }
 
@@ -79,22 +116,28 @@ class UndertaleTooltipStyle {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     ctx.fillStyle = "#000000";
-    ctx.fillRect(6 * settings.pixelScale, 6 * settings.pixelScale, canvas.width - (12 * settings.pixelScale), canvas.height - (12 * settings.pixelScale));
-    ctx.fillRect(3 * settings.pixelScale, 0, canvas.width - 6 * settings.pixelScale, 3 * settings.pixelScale);
-    ctx.fillRect(3 * settings.pixelScale, canvas.height - (3 * settings.pixelScale), canvas.width - 6 * settings.pixelScale, 3 * settings.pixelScale);
-    ctx.fillRect(0, 0, 3 * settings.pixelScale, canvas.height);
-    ctx.fillRect(canvas.width - (3 * settings.pixelScale), 0, 3 * settings.pixelScale, canvas.height);
+    let pixelScale = getSetting("pixelScale", canvas);
+    ctx.fillRect(6 * pixelScale, 6 * pixelScale, canvas.width - (12 * pixelScale), canvas.height - (12 * pixelScale));
+    ctx.fillRect(3 * pixelScale, 0, canvas.width - 6 * pixelScale, 3 * pixelScale);
+    ctx.fillRect(3 * pixelScale, canvas.height - (3 * pixelScale), canvas.width - 6 * pixelScale, 3 * pixelScale);
+    ctx.fillRect(0, 0, 3 * pixelScale, canvas.height);
+    ctx.fillRect(canvas.width - (3 * pixelScale), 0, 3 * pixelScale, canvas.height);
     ctx.fillStyle = "#ffffff";
-    ctx.fillRect(6 * settings.pixelScale, 3 * settings.pixelScale, canvas.width - 12 * settings.pixelScale, 3 * settings.pixelScale);
-    ctx.fillRect(6 * settings.pixelScale, canvas.height - (6 * settings.pixelScale), canvas.width - 12 * settings.pixelScale, 3 * settings.pixelScale);
-    ctx.fillRect(3 * settings.pixelScale, 3 * settings.pixelScale, 3 * settings.pixelScale, canvas.height - 6 * settings.pixelScale);
-    ctx.fillRect(canvas.width - (6 * settings.pixelScale), 3 * settings.pixelScale, 3 * settings.pixelScale, canvas.height - 6 * settings.pixelScale);
+    ctx.fillRect(6 * pixelScale, 3 * pixelScale, canvas.width - 12 * pixelScale, 3 * pixelScale);
+    ctx.fillRect(6 * pixelScale, canvas.height - (6 * pixelScale), canvas.width - 12 * pixelScale, 3 * pixelScale);
+    ctx.fillRect(3 * pixelScale, 3 * pixelScale, 3 * pixelScale, canvas.height - 6 * pixelScale);
+    ctx.fillRect(canvas.width - (6 * pixelScale), 3 * pixelScale, 3 * pixelScale, canvas.height - 6 * pixelScale);
+  }
+
+  getLineHeight(line) {
+    return this.fontSize + this.lineSpace;
   }
 }
 
 const styles = Object.freeze({
   beta: new BetaTooltipStyle(),
-  vanilla: new VanillaTooltipStyle(),
+  java: new JavaTooltipStyle(),
+  bedrock: new BedrockTooltipStyle(),
   undertale: new UndertaleTooltipStyle()
 });
 
@@ -104,25 +147,55 @@ const ColorCodeView = Object.freeze({
   ALWAYS: "always"
 });
 
+const AddressedOverflow = Object.freeze({
+  NONE: Object.freeze({name: "none", top: false, right: false}),
+  TOP: Object.freeze({name: "top", top: true, right: false}),
+  RIGHT: Object.freeze({name: "right", top: false, right: true}),
+  TOP_RIGHT: Object.freeze({name: "top_right", top: true, right: true})
+});
+
 const settings = {
-  style: styles.vanilla,
+  style: "java",
   pixelScale: 2,
   colorCodeChar: '§',
-  colorCodeView: ColorCodeView.NEVER
+  colorCodeView: ColorCodeView.NEVER,
+  addressedOverflow: AddressedOverflow.TOP_RIGHT
+};
+
+let mouseX = 0;
+let mouseY = 0;
+
+function updateFollowerPositions() {
+  let cursorFollowers = document.getElementsByClassName('follow-cursor');
+  for (let i = 0; i < cursorFollowers.length; i++) {
+    cursorFollowers.item(i).style.left = cursorFollowers.item(i).style.right = cursorFollowers.item(i).style.top = cursorFollowers.item(i).style.bottom = null;
+    if (mouseX + 10 + cursorFollowers.item(i).width > window.innerWidth && getSetting("addressedOverflow", cursorFollowers.item(i)).right) {
+      cursorFollowers.item(i).style.right = (window.innerWidth - (mouseX - 10)) + 'px';
+    } else {
+      cursorFollowers.item(i).style.left = (mouseX + 10) + 'px';
+    }
+    if (mouseY - 5 - cursorFollowers.item(i).height < 0 && getSetting("addressedOverflow", cursorFollowers.item(i)).top) {
+      cursorFollowers.item(i).style.top = (mouseY + 5) + 'px';
+    } else {
+      cursorFollowers.item(i).style.bottom = (window.innerHeight - (mouseY - 5)) + 'px';
+    }
+  }
 }
 
 document.addEventListener('mousemove', (e) => {
-  let cursorFollowers = document.getElementsByClassName('follow-cursor');
-  for (let i = 0; i < cursorFollowers.length; i++) {
-    cursorFollowers.item(i).style.left = (e.clientX + 10) + 'px';
-    cursorFollowers.item(i).style.top = (e.clientY - cursorFollowers.item(i).height - 5) + 'px';
-  }
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  updateFollowerPositions();
 });
+
+function getSetting(setting, canvas) {
+  return canvas.dataset["setting" + (setting ? setting[0].toUpperCase() + setting.slice(1) : "")] || settings[setting];
+}
 
 function setDefaultCanvasSettings(canvas) {
   let ctx = canvas.getContext('2d');
-  ctx.font = settings.style.fontSize * settings.pixelScale + 'px ' + settings.style.font + ',"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif';
-  canvas.dataset.wordSpacing = settings.style.wordSpacing + "px";
+  ctx.font = styles[getSetting("style", canvas)].fontSize * getSetting("pixelScale", canvas) + 'px ' + styles[getSetting("style", canvas)].font + ',"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif';
+  canvas.dataset.wordSpacing = styles[getSetting("style", canvas)].wordSpacing + "px";
 }
 
 function setTooltipText(canvas, str) {
@@ -138,18 +211,19 @@ function drawTooltip(canvas, textRenderer) {
 
   updateCanvasSize(canvas, textRenderer);
 
-  settings.style.render(canvas);
+  styles[getSetting("style", canvas)].render(canvas);
 
   setDefaultCanvasSettings(canvas);
-  textRenderer.drawText(str, settings.style.paddingLeft * settings.pixelScale, (settings.style.paddingTop + textRenderer.getLineHeight(false)) * settings.pixelScale, settings.style.shadow);
+  textRenderer.drawText(str, styles[getSetting("style", canvas)].paddingLeft * getSetting("pixelScale", canvas), (styles[getSetting("style", canvas)].paddingTop + styles[getSetting("style", canvas)].fontSize) * getSetting("pixelScale", canvas), styles[getSetting("style", canvas)].shadow);
 
   requestAnimationFrame(() => drawTooltip(canvas, textRenderer));
 }
 
 function updateCanvasSize(canvas, textRenderer, text = canvas.dataset.text) {
 	setDefaultCanvasSettings(canvas);
-  canvas.width = (textRenderer.getWidth(text) + settings.style.paddingLeft + settings.style.paddingRight) * settings.pixelScale;
-  canvas.height = (textRenderer.getHeight(text) + settings.style.paddingTop + settings.style.paddingBottom) * settings.pixelScale + (settings.style.firstLineIsHigher && text.split('\n').length > 1 ? 2 * settings.pixelScale : 0);
+  canvas.width = (textRenderer.getWidth(text) + styles[getSetting("style", canvas)].paddingLeft + styles[getSetting("style", canvas)].paddingRight) * getSetting("pixelScale", canvas);
+  canvas.height = (textRenderer.getHeight(text) + styles[getSetting("style", canvas)].paddingTop + styles[getSetting("style", canvas)].paddingBottom) * getSetting("pixelScale", canvas);
+  updateFollowerPositions();
 }
 
 function createTooltip(text = "", followCursor = false) {
@@ -181,7 +255,7 @@ class TextRenderer {
       
         textRenderer.characterWidthsMap.get(width).push(char);
       }
-    }
+    };
 
     updateMap(this);
     document.fonts.ready.then(() => updateMap(this));
@@ -211,7 +285,7 @@ class TextRenderer {
       textRenderingContext.setToRender = [];
       textRenderingContext.charIndex++;
       return width;
-    }
+    };
 
     for (const line of lines) {
       let cursor = 0;
@@ -221,19 +295,19 @@ class TextRenderer {
         textRenderingContext.char = line[cursor];
         const originalLeft = textRenderingContext.left;
         switch (textRenderingContext.char) {
-          case settings.colorCodeChar:
+          case getSetting("colorCodeChar", textRenderingContext.canvas):
             if (cursor + 1 >= line.length) {
-              if (settings.colorCodeView !== ColorCodeView.NEVER) {
+              if (getSetting("colorCodeView", textRenderingContext.canvas) !== ColorCodeView.NEVER) {
                 lineWidth += charWidth(this, originalLeft);
               }
               break;
             }
-            if (settings.colorCodeView === ColorCodeView.ALWAYS) {
+            if (getSetting("colorCodeView", textRenderingContext.canvas) === ColorCodeView.ALWAYS) {
               lineWidth += charWidth(this, originalLeft);
             }
             cursor++;
             textRenderingContext.char = line[cursor];
-            if (settings.colorCodeView === ColorCodeView.ALWAYS) {
+            if (getSetting("colorCodeView", textRenderingContext.canvas) === ColorCodeView.ALWAYS) {
               lineWidth += charWidth(this, originalLeft);
             }
             if (TextFormatting.formattingCodes[textRenderingContext.char]) {
@@ -252,7 +326,7 @@ class TextRenderer {
                 renderFunction(textRenderingContext, this, false);
               }
             }
-            lineWidth += parseFloat(textRenderingContext.canvas.dataset.wordSpacing) * settings.pixelScale + ((textRenderingContext.left - originalLeft));
+            lineWidth += parseFloat(textRenderingContext.canvas.dataset.wordSpacing) * getSetting("pixelScale", textRenderingContext.canvas) + ((textRenderingContext.left - originalLeft));
             ctx.restore();
             textRenderingContext.charIndex++;
             break;
@@ -268,19 +342,27 @@ class TextRenderer {
       textRenderingContext.formatting.reset(textRenderingContext);
     }
 
-    return scaledWidth / settings.pixelScale;
+    return scaledWidth / getSetting("pixelScale", textRenderingContext.canvas);
   }
 
   getHeight(string) {
-    return this.removeColorCodes(string).split('\n').length * this.getLineHeight();
+    let height = 0;
+    for (let i = 0; i < this.removeColorCodes(string).split('\n').length; i++) {
+      height += styles[getSetting("style", this.canvas)].getLineHeight(i);
+    }
+    return height;
   }
 
-  getLineHeight(withLineSpace = true) {
-    return settings.style.fontSize + (withLineSpace ? settings.style.lineSpace : 0);
+  getLineHeight(line) {
+    let height = -styles[getSetting("style", this.canvas)].getLineHeight(0);
+    for (let i = 0; i <= line; i++) {
+      height += styles[getSetting("style", this.canvas)].getLineHeight(i);
+    }
+    return height;
   }
 
   removeColorCodes(string) {
-    return string.replaceAll(settings.colorCodeChar, "");
+    return string.replaceAll(getSetting("colorCodeChar", this.canvas), "");
   }
 
   drawText(string, x, y, shadow, formatting = new TextFormatting()) {
@@ -298,17 +380,17 @@ class TextRenderer {
           textRenderingContext.left = 0;
           textRenderingContext.formatting.reset(textRenderingContext);
           break;
-        case settings.colorCodeChar:
+        case getSetting("colorCodeChar", textRenderingContext.canvas):
           if (cursor + 1 >= string.length) {
-            if (settings.colorCodeView !== ColorCodeView.NEVER) this.drawChar(ctx, textRenderingContext);
+            if (getSetting("colorCodeView", textRenderingContext.canvas) !== ColorCodeView.NEVER) this.drawChar(ctx, textRenderingContext);
             break;
           }
-          if (settings.colorCodeView === ColorCodeView.ALWAYS) {
+          if (getSetting("colorCodeView", textRenderingContext.canvas) === ColorCodeView.ALWAYS) {
             this.drawChar(ctx, textRenderingContext);
           }
           cursor++;
           textRenderingContext.char = string[cursor];
-          if (settings.colorCodeView === ColorCodeView.ALWAYS) {
+          if (getSetting("colorCodeView", textRenderingContext.canvas) === ColorCodeView.ALWAYS) {
             this.drawChar(ctx, textRenderingContext);
           }
           if (TextFormatting.formattingCodes[textRenderingContext.char]) {
@@ -336,13 +418,13 @@ class TextRenderer {
       const blue = Math.round((originalColor & 0xFF) * (41/168));
 
       const textRenderingContextCopy = textRenderingContext.copy();
-      textRenderingContextCopy.x += settings.pixelScale;
-      textRenderingContextCopy.y += settings.pixelScale;
+      textRenderingContextCopy.x += getSetting("pixelScale", textRenderingContext.canvas);
+      textRenderingContextCopy.y += getSetting("pixelScale", textRenderingContext.canvas);
       this.drawCharInternal(textRenderingContextCopy, red << 16 | green << 8 | blue);
     }
     this.drawCharInternal(textRenderingContext);
     ctx.restore();
-    textRenderingContext.left += this.getWidth(textRenderingContext.char, false, textRenderingContext.formatting.copy()) * settings.pixelScale;
+    textRenderingContext.left += this.getWidth(textRenderingContext.char, false, textRenderingContext.formatting.copy()) * getSetting("pixelScale", textRenderingContext.canvas);
     textRenderingContext.setToRender = [];
     textRenderingContext.charIndex++;
   }
@@ -357,7 +439,7 @@ class TextRenderer {
     }
     // CanvasRenderingContext2D.wordSpacing doesn't seem to work on Chromium-based browsers, so we have a special condition for spaces
     if (textRenderingContext.char !== ' ') {
-      ctx.fillText(textRenderingContext.char, textRenderingContext.x + textRenderingContext.left, textRenderingContext.y + (textRenderingContext.line * this.getLineHeight() * settings.pixelScale) + (textRenderingContext.line > 0 && settings.style.firstLineIsHigher ? 2 * settings.pixelScale : 0));
+      ctx.fillText(textRenderingContext.char, textRenderingContext.x + textRenderingContext.left, textRenderingContext.y + this.getLineHeight(textRenderingContext.line) * getSetting("pixelScale", textRenderingContext.canvas));
     }
     ctx.restore();
   }
@@ -366,11 +448,11 @@ class TextRenderer {
     let newText = '';
     for (const char of originalText) {
       const width = this.getWidth(char, false);
-      if (this.characterWidthsMap.has(width)) {
+      if (char != ' ' && this.characterWidthsMap.has(width)) {
         const charactersWithSameWidth = this.characterWidthsMap.get(width);
         newText += charactersWithSameWidth[Math.floor(Math.random() * charactersWithSameWidth.length)];
       } else {
-        newText += originalText;
+        newText += char;
       }
     }
     return newText;
@@ -432,7 +514,24 @@ class TextFormatting {
     d: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xFF55FF), type: TextFormatting.FormattingOptions.COLOR},
     e: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xFFFF55), type: TextFormatting.FormattingOptions.COLOR},
     f: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xFFFFFF), type: TextFormatting.FormattingOptions.COLOR},
-    j: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => {
+    g: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xDDD605), type: TextFormatting.FormattingOptions.COLOR},
+    h: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xE3D4D1), type: TextFormatting.FormattingOptions.COLOR},
+    i: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xCECACA), type: TextFormatting.FormattingOptions.COLOR},
+    j: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x443A3B), type: TextFormatting.FormattingOptions.COLOR},
+    k: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.OBFUSCATED, true), type: TextFormatting.FormattingOptions.OBFUSCATED},
+    l: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.BOLD, true), type: TextFormatting.FormattingOptions.BOLD},
+    m: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.STRIKETHROUGH, true), type: TextFormatting.FormattingOptions.STRIKETHROUGH},
+    ḿ: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x971607), type: TextFormatting.FormattingOptions.COLOR}, // Bedrock M
+    n: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.UNDERLINE, true), type: TextFormatting.FormattingOptions.UNDERLINE},
+    ń: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xB4684D), type: TextFormatting.FormattingOptions.COLOR}, // Bedrock N
+    o: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.ITALIC, true), type: TextFormatting.FormattingOptions.ITALIC},
+    p: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0xDEB12D), type: TextFormatting.FormattingOptions.COLOR},
+    q: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x47A036), type: TextFormatting.FormattingOptions.COLOR},
+    r: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.RESET, true), type: TextFormatting.FormattingOptions.RESET},
+    s: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x2CBAA8), type: TextFormatting.FormattingOptions.COLOR},
+    t: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x21497B), type: TextFormatting.FormattingOptions.COLOR},
+    u: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => 0x9A5CC6), type: TextFormatting.FormattingOptions.COLOR},
+    v: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.COLOR, () => {
       const time = performance.now() * 0.001;
       const r = (Math.sin(time) + 1) * 127.5;
       const g = (Math.sin(time + (Math.PI / 2)) + 1) * 127.5;
@@ -440,19 +539,13 @@ class TextFormatting {
 
       return r << 16 | g << 8 | b;
     }), type: TextFormatting.FormattingOptions.COLOR},
-    k: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.OBFUSCATED, true), type: TextFormatting.FormattingOptions.OBFUSCATED},
-    l: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.BOLD, true), type: TextFormatting.FormattingOptions.BOLD},
-    m: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.STRIKETHROUGH, true), type: TextFormatting.FormattingOptions.STRIKETHROUGH},
-    n: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.UNDERLINE, true), type: TextFormatting.FormattingOptions.UNDERLINE},
-    o: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.ITALIC, true), type: TextFormatting.FormattingOptions.ITALIC},
-    p: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.VERTICAL_BOBBING, true), type: TextFormatting.FormattingOptions.VERTICAL_BOBBING},
-    q: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.HORIZONTAL_BOBBING, true), type: TextFormatting.FormattingOptions.HORIZONTAL_BOBBING},
-    r: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.RESET, true), type: TextFormatting.FormattingOptions.RESET},
-    s: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.RANDOM_BOBBING, true), type: TextFormatting.FormattingOptions.RANDOM_BOBBING}
+    w: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.VERTICAL_BOBBING, true), type: TextFormatting.FormattingOptions.VERTICAL_BOBBING},
+    x: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.HORIZONTAL_BOBBING, true), type: TextFormatting.FormattingOptions.HORIZONTAL_BOBBING},
+    y: {formatFunction: (textRenderingContext) => textRenderingContext.formatting.setFormattingOption(TextFormatting.FormattingOptions.RANDOM_BOBBING, true), type: TextFormatting.FormattingOptions.RANDOM_BOBBING}
   }
 
   constructor() {
-    this.formattingOptions = {}
+    this.formattingOptions = {};
 
     this.addColorOption(TextFormatting.FormattingOptions.RESET, () => {}, false); // color options reset, so we do not want any code here
     this.addColorOption(TextFormatting.FormattingOptions.COLOR, () => {}, () => 0xFFFFFF);
@@ -465,29 +558,29 @@ class TextFormatting {
       const ctx = textRenderingContext.canvas.getContext('2d');
       if (value) {
         const time = performance.now() * 0.01;
-        ctx.transform(1, 0, 0, 1, 0, Math.sin(time + textRenderingContext.charIndex) * settings.pixelScale);
+        ctx.transform(1, 0, 0, 1, 0, Math.sin(time + textRenderingContext.charIndex) * getSetting("pixelScale", textRenderingContext.canvas));
       }
     }, false);
     this.addFormattingOption(TextFormatting.FormattingOptions.HORIZONTAL_BOBBING, (textRenderingContext, textRenderer, value) => {
       const ctx = textRenderingContext.canvas.getContext('2d');
       if (value) {
         const time = performance.now() * 0.01;
-        ctx.transform(1, 0, 0, 1, Math.cos(time + textRenderingContext.charIndex) * settings.pixelScale / 2, 0);
+        ctx.transform(1, 0, 0, 1, Math.cos(time + textRenderingContext.charIndex) * getSetting("pixelScale", textRenderingContext.canvas) / 2, 0);
       }
     }, false);
     this.addFormattingOption(TextFormatting.FormattingOptions.RANDOM_BOBBING, (textRenderingContext, textRenderer, value) => {
       const ctx = textRenderingContext.canvas.getContext('2d');
       if (value) {
         const time = performance.now() * 0.01;
-        ctx.transform(1, 0, 0, 1, ((Math.random() * 2) - 1) * settings.pixelScale / 2, ((Math.random() * 2) - 1) * settings.pixelScale / 2);
+        ctx.transform(1, 0, 0, 1, ((Math.random() * 2) - 1) * getSetting("pixelScale", textRenderingContext.canvas) / 2, ((Math.random() * 2) - 1) * getSetting("pixelScale", textRenderingContext.canvas) / 2);
       }
     }, false);
     this.addFormattingOption(TextFormatting.FormattingOptions.BOLD, (textRenderingContext, textRenderer, value) => {
       if (value) {
-        textRenderingContext.left += settings.pixelScale;
+        textRenderingContext.left += getSetting("pixelScale", textRenderingContext.canvas);
         textRenderingContext.setToRender.push((textRenderingContext, textRenderer, shouldDraw) => {
           const textRenderingContextCopy = textRenderingContext.copy();
-          textRenderingContextCopy.left -= settings.pixelScale;
+          textRenderingContextCopy.left -= getSetting("pixelScale", textRenderingContext.canvas);
           textRenderingContextCopy.formatting.setFormattingOption(TextFormatting.FormattingOptions.BOLD, false);
           textRenderingContextCopy.formatting.setFormattingOption(TextFormatting.FormattingOptions.OBFUSCATED, false);
           if (shouldDraw) textRenderer.drawCharInternal(textRenderingContextCopy);
@@ -498,22 +591,22 @@ class TextFormatting {
       if (value) {
         textRenderingContext.setToRender.push((textRenderingContext, textRenderer, shouldDraw) => {
           const ctx = textRenderingContext.canvas.getContext('2d');
-          if (shouldDraw) ctx.fillRect((textRenderingContext.x + textRenderingContext.left) - settings.pixelScale, (textRenderingContext.y + (textRenderingContext.line * textRenderer.getLineHeight() * settings.pixelScale) + (textRenderingContext.line > 0 && settings.style.firstLineIsHigher ? 2 * settings.pixelScale : 0)) + settings.pixelScale, textRenderer.getWidth(textRenderingContext.char) * settings.pixelScale + settings.pixelScale, settings.pixelScale);
-        })
+          if (shouldDraw) ctx.fillRect((textRenderingContext.x + textRenderingContext.left) - getSetting("pixelScale", textRenderingContext.canvas), (textRenderingContext.y + textRenderer.getLineHeight(textRenderingContext.line) * getSetting("pixelScale", textRenderingContext.canvas)) + getSetting("pixelScale", textRenderingContext.canvas), textRenderer.getWidth(textRenderingContext.char) * getSetting("pixelScale", textRenderingContext.canvas) + getSetting("pixelScale", textRenderingContext.canvas), getSetting("pixelScale", textRenderingContext.canvas));
+        });
       }
     }, false);
     this.addFormattingOption(TextFormatting.FormattingOptions.STRIKETHROUGH, (textRenderingContext, textRenderer, value) => {
       const ctx = textRenderingContext.canvas.getContext('2d');
       if (value) {
         textRenderingContext.setToRender.push((textRenderingContext, textRenderer, shouldDraw) => {
-          if (shouldDraw) ctx.fillRect((textRenderingContext.x + textRenderingContext.left) - settings.pixelScale, (textRenderingContext.y + (textRenderingContext.line * textRenderer.getLineHeight() * settings.pixelScale) + (textRenderingContext.line > 0 && settings.style.firstLineIsHigher ? 2 * settings.pixelScale : 0)) - 3.5 * settings.pixelScale, textRenderer.getWidth(textRenderingContext.char) * settings.pixelScale + settings.pixelScale, settings.pixelScale);
+          if (shouldDraw) ctx.fillRect((textRenderingContext.x + textRenderingContext.left) - getSetting("pixelScale", textRenderingContext.canvas), (textRenderingContext.y + textRenderer.getLineHeight(textRenderingContext.line) * getSetting("pixelScale", textRenderingContext.canvas)) - 3.5 * getSetting("pixelScale", textRenderingContext.canvas), textRenderer.getWidth(textRenderingContext.char) * getSetting("pixelScale", textRenderingContext.canvas) + getSetting("pixelScale", textRenderingContext.canvas), getSetting("pixelScale", textRenderingContext.canvas));
         });
       }
     }, false);
     this.addFormattingOption(TextFormatting.FormattingOptions.ITALIC, (textRenderingContext, textRenderer, value) => {
       const ctx = textRenderingContext.canvas.getContext('2d');
       if (value) {
-        const verticalPosition = (textRenderingContext.y + (textRenderingContext.line * textRenderer.getLineHeight() * settings.pixelScale) + (textRenderingContext.line > 0 && settings.style.firstLineIsHigher ? 2 * settings.pixelScale : 0)) - 3.5 * settings.pixelScale;
+        const verticalPosition = (textRenderingContext.y + textRenderer.getLineHeight(textRenderingContext.line) * getSetting("pixelScale", textRenderingContext.canvas)) - 3.5 * getSetting("pixelScale", textRenderingContext.canvas);
         ctx.transform(1, 0, 0, 1, 0, verticalPosition);
         ctx.transform(1, 0, -0.2, 1, 0, 0);
         ctx.transform(1, 0, 0, 1, 0, -verticalPosition);
@@ -582,6 +675,12 @@ class TextFormatting {
   }
 }
 
+// Automatically turns any canvas.tooltip elements with the data-text attribute into a tooltip
+for (let element of document.getElementsByClassName("tooltip")) {
+  if (element.nodeName !== "CANVAS" || !element.dataset.text) continue;
+  drawTooltip(element);
+}
+
 /*
 Uncomment the following to automatically add a tooltip to the page
 which follows the mouse and changes its contents if the element has
@@ -594,16 +693,16 @@ followerTooltip.classList.add("hidden");
 const minecraftItems = document.getElementsByClassName("minecraft-item");
 
 for (let i = 0; i < minecraftItems.length; i++) {
+  let interval;
   minecraftItems.item(i).addEventListener('mouseenter', (e) => {
     if (!e.target.dataset.mctitle) return;
     followerTooltip.classList.remove("hidden");
-    getTextFromJSON(e.target.dataset.mctitle).get().then(str => {
-      setTooltipText(followerTooltip, str);
-    });
+    setTooltipText(followerTooltip, getTextFromJSON(e.target.dataset.mctitle).get());
   });
 
   minecraftItems.item(i).addEventListener('mouseleave', (e) => {
     followerTooltip.classList.add("hidden");
+    clearInterval(interval);
   });
 }
 document.body.appendChild(followerTooltip);

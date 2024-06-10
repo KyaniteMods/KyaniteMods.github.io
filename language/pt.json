@@ -55,5 +55,8 @@
     "category.mod.videos": "Vídeos",
     "category.mod.links": "Links",
     "category.mod.deeperdarker.title": "Deeper and Darker",
-    "category.mod.deeperdarker.description": "Deeper and Darker é um mod focado na expansão das profundezas sombrias com um monte de conteúdo novo! Explore o Otherside — uma nova dimensão com novos itens, criaturas e blocos para construir!"
+    "category.mod.deeperdarker.description": "Deeper and Darker é um mod focado na expansão das profundezas sombrias com um monte de conteúdo novo! Explore o Otherside — uma nova dimensão com novos itens, criaturas e blocos para construir!",
+    "light_mode.on": "Mudar para tema escuro",
+    "light_mode.off": "Mudar para tema claro",
+    "support_widget.title": "Apoie-nos"
 }

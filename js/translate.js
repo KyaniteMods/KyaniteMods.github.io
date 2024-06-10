@@ -17,81 +17,97 @@ switch (urlParams.get('lang')) {
 		break;
 }
 
-if (localStorage.language === undefined || localStorage.language === "null") {
-	localStorage.language = 'en';
+if (localStorage.language === undefined) {
+	localStorage.language = Translate.DEFAULT_LANGUAGE;
 }
 
 class Translate {
+	static DEFAULT_LANGUAGE = 'en';
+
 	constructor(language) {
 		this.language = language;
+		this.changeListeners = [];
+		this.loadFunctions = [];
+		this.reloadLoc().then(file => {
+			for (let loadFunction of this.loadFunctions) {
+				loadFunction();
+			}
+		});
 	}
 	
-	async translateString(string, ...args) {
-		if (!this.file) {
-			this.file = await fetch('/language/' + (this.language ? this.language : localStorage.language) + '.json');
-		}
+	translateString(string, ...args) {
 		let translatedString = string;
 
-        const promises = [];
+		if (this.file && this.file[string]) {
+			translatedString = this.file[string];
+		} else if (this.defaultFile && this.defaultFile[string]) {
+			translatedString = this.defaultFile[string];
+		}
 
-		if (this.file.ok) {
-			const fileJson = await this.file.clone().json();
-			if (fileJson[string] != null) {
-				translatedString =  fileJson[string];
-			}
+		for (let i = 1; i <= args.length; i++) {
+			const placeholder = '%' + i + '$s';
+			if (!(args[i - 1] instanceof LiteralText || args[i - 1] instanceof TranslatableText)) args[i - 1] = new LiteralText(args[i - 1]);
+			const str = args[i - 1].get();
 
-			for (let i = 1; i <= args.length; i++) {
-				const placeholder = "%" + i + "$s";
-				if (!(args[i - 1] instanceof LiteralText || args[i - 1] instanceof TranslatableText)) args[i - 1] = new LiteralText(args[i - 1]);
-				const argPromise = args[i - 1].get();
-
-				if (translatedString.includes(placeholder)) {
-					argPromise.then(str => {
-						translatedString = translatedString.replace(placeholder, str);
-					});
-				} else {
-					argPromise.then(str => {
-						translatedString = translatedString.replace("%s", str);
-					});
-				}
-
-				await argPromise;
+			if (translatedString.includes(placeholder)) {
+				translatedString = translatedString.replace(placeholder, str);
+			} else {
+				translatedString = translatedString.replace('%s', str);
 			}
 		}
 
 		return translatedString;
 	}
-	
-	async reloadLoc() {
-		this.file = await fetch('/language/' + (this.language ? this.language : localStorage.language) + '.json');
-		let allElements = document.getElementsByTagName("*");
-		for (let currentElement of allElements) {
-			const keyAttribute = currentElement.getAttribute("data-string");
-			const placeholderKeyAttribute = currentElement.getAttribute("data-placeholder");
-			const ariaLabelKeyAttribute = currentElement.getAttribute("data-aria-label");
 
-			if (keyAttribute !== null) {
-				getTextFromJSON(keyAttribute).get().then(str => {
-					currentElement.innerHTML = str;
-				});
-			}
+	addChangeListener(listener) {
+		if (typeof listener !== 'function') throw new Error('translate.js change listener must be a function');
+		this.changeListeners.push(listener);
+	}
 
-			if (placeholderKeyAttribute !== null) {
-				getTextFromJSON(placeholderKeyAttribute).get().then(str => {
-					currentElement.placeholder = str;
-				});
-			}
-
-			if (ariaLabelKeyAttribute !== null) {
-				getTextFromJSON(ariaLabelKeyAttribute).get().then(str => {
-					currentElement.ariaLabel = str;
-				});
-			}
+	whenLoaded(loadFunction) {
+		if (typeof loadFunction !== 'function') throw new Error('translate.js load function must be a function');
+		if (!this.file) {
+			this.loadFunctions.push(loadFunction);
+		} else {
+			loadFunction();
 		}
 	}
 	
-	async getKeyWrapped(key, ...args) {
-		return "<span data-string='" + JSON.stringify(new TranslatableText(key, ...args)) + "'>" + (await this.translateString(key, ...args)) + "</span>";
+	async reloadLoc() {
+		this.defaultFile = await fetch('/language/' + Translate.DEFAULT_LANGUAGE + '.json');
+		this.defaultFile = await this.defaultFile.clone().json();
+		if ((this.language || localStorage.language) === Translate.DEFAULT_LANGUAGE) {
+			this.file = this.defaultFile;
+		} else {
+			this.file = await fetch('/language/' + (this.language || localStorage.language) + '.json');
+			this.file = await this.file.clone().json();
+		}
+		let allElements = document.getElementsByTagName('*');
+		for (let currentElement of allElements) {
+			const keyAttribute = currentElement.getAttribute('data-string');
+			const placeholderKeyAttribute = currentElement.getAttribute('data-placeholder');
+			const ariaLabelKeyAttribute = currentElement.getAttribute('data-aria-label');
+
+			if (keyAttribute !== null) {
+				currentElement.innerHTML = getTextFromJSON(keyAttribute).get();
+			}
+
+			if (placeholderKeyAttribute !== null) {
+				currentElement.placeholder = getTextFromJSON(placeholderKeyAttribute).get();
+			}
+
+			if (ariaLabelKeyAttribute !== null) {
+				currentElement.ariaLabel = getTextFromJSON(ariaLabelKeyAttribute).get();
+			}
+		}
+		for (let listener of this.changeListeners) {
+			listener();
+		}
+		return this.file;
+	}
+	
+	getKeyWrapped(key, ...args) {
+		return `<span data-string='${JSON.stringify(new TranslatableText(key, ...args))}'>${(this.translateString(key, ...args))}</span>`;
 	}
 }
 
@@ -99,4 +115,21 @@ var translate = new Translate();
 
 function reloadLanguage() {
     translate.reloadLoc();
+}
+
+function changeLanguage(language) {
+	localStorage.language = language;
+	reloadLanguage();
+    let url = new URL(window.location.href);
+    let params = new URLSearchParams(url.search);
+
+    params.delete('lang');
+
+    let newUrl = url.origin + url.pathname + (params.toString() ? '?' + params.toString() : '') + '#';
+
+    if (new URL(newUrl).origin === window.location.origin) {
+        window.history.pushState({ path: newUrl }, '', newUrl);
+    } else {
+        console.error("The new URL's origin does not match the current origin");
+    }
 }

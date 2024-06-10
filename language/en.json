@@ -55,5 +55,8 @@
     "category.mod.videos": "Videos",
     "category.mod.links": "Links",
     "category.mod.deeperdarker.title": "Deeper and Darker",
-    "category.mod.deeperdarker.description": "Deeper and Darker is a mod focused on expanding the Deep Dark with lots of new content! Explore the new Otherside dimension — a location with new items, new mobs and new blocks to build with!"
+    "category.mod.deeperdarker.description": "Deeper and Darker is a mod focused on expanding the Deep Dark with lots of new content! Explore the new Otherside dimension — a location with new items, new mobs and new blocks to build with!",
+    "light_mode.on": "Switch to Dark Mode",
+    "light_mode.off": "Switch to Light Mode",
+    "support_widget.title": "Support Us"
 }
