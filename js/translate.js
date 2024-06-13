@@ -84,12 +84,6 @@ class Translate {
 		}
 		let allElements = document.getElementsByTagName('*');
 		for (let currentElement of allElements) {
-			const keyAttribute = currentElement.getAttribute('data-translate-string');
-
-			if (keyAttribute !== null) {
-				currentElement.innerHTML = getTextFromJSON(keyAttribute).get();
-			}
-
 			for (let attribute of currentElement.attributes) {
 				if (attribute.name === "data-translate-string") {
 					currentElement.innerHTML = getTextFromJSON(attribute.value).get();
