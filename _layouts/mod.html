@@ -3,12 +3,12 @@ layout: default
 title: {{ page.title }}
 ---
 
-<div class="grid-2-items gap-15"><div style="display: inline-block;"><img src="{{ page.mod-image }}" class="mod-image"></div><div style="display:flex; align-items:center; width: 400px;"><div style="display: inline-block;"><h2 style="display: inline;" data-string='{"translate":"{{ page.title }}"}'></h2><p style="font-size: 20px;" data-string='{"translate":"{{ page.description }}"}'></p></div></div></div>
-<h1 data-string='{"translate":"category.mod.image_heading"}'>A Look Into The Game</h1>
+<div class="grid-2-items gap-15"><div style="display: inline-block;"><img src="{{ page.mod-image }}" class="mod-image"></div><div style="display:flex; align-items:center; width: 400px;"><div style="display: inline-block;"><h2 style="display: inline;" data-translate-string='{"translate":"{{ page.title }}"}'></h2><p style="font-size: 20px;" data-translate-string='{"translate":"{{ page.description }}"}'></p></div></div></div>
+<h1 data-translate-string='{"translate":"category.mod.image_heading"}'>A Look Into The Game</h1>
 <div class="grid-2-items gap-15 fit-wrapper"><img src="{{ page.image1 }}" style="width: 100%;">
 <img src="{{ page.image2 }}" style="width: 100%;">
 <img src="{{ page.image3 }}" style="width: 100%;">
 <img src="{{ page.image4 }}" style="width: 100%;"></div>
 {{ content }}
-<h1 data-string='{"translate":"category.mod.links"}'>Links</h1>
+<h1 data-translate-string='{"translate":"category.mod.links"}'>Links</h1>
 {% if page.curseforge %}<a href="{{ page.curseforge }}"><div class="curseforge-button"></div></a><link rel="preload" as="image" href="/assets/curseforge_button_hover.png">{% endif %}{% if page.modrinth %} <a href="{{ page.modrinth }}"><div class="modrinth-button"></div></a><link rel="preload" as="image" href="/assets/modrinth_button_hover.png">{% endif %} {% if page.github %}<a href="{{ page.github }}"><div class="github-button"></div></a><link rel="preload" as="image" href="/assets/github_button_hover.png">{% endif %} {% if page.crowdin %}<a href="{{ page.crowdin }}"><div class="crowdin-button"></div></a><link rel="preload" as="image" href="/assets/crowdin_button_hover.png">{% endif %}

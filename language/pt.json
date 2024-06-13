@@ -1,4 +1,10 @@
 {
+    "global.title": "Kyanite Mods – %s",
+    "home.title": "Início",
+    "mods.title": "Mods",
+    "news.title": "Notícias",
+    "about.title": "Sobre",
+    "404.title": "Página não encontrada",
     "index.kyanitemods.about_the_team": "Kyanite Mods é um grupo de modders de <span style=\"font-style: italic;\">Minecraft: Java Edition</span> que desenvolve mods em <span style=\"font-style: italic;\">Forge</span> e <span style=\"font-style: italic;\">Fabric</span> para complementar e realçar o <span style=\"font-style: italic;\">Minecraft</span> enquanto mantém a maior parte do conteúdo próxima ao jogo-base.",
     "mod_card.deeperdarker.short_description": "Um mod que expande as profundezas sombrias adicionando uma nova dimensão!",
     "mod_card.paragon.short_description": "Uma biblioteca de configuração leve e simples de usar!",

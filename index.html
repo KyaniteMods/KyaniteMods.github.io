@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Home
+title: home.title
 ---
 
-<h1 data-string='{"translate":"category.index.kyanitemods"}'>Kyanite Mods</h1>
-<div class="card text-card" data-string='{"translate":"index.kyanitemods.about_the_team"}'></div>
+<h1 data-translate-string='{"translate":"category.index.kyanitemods"}'>Kyanite Mods</h1>
+<div class="card text-card" data-translate-string='{"translate":"index.kyanitemods.about_the_team"}'></div>
 <div style="text-align: center;"><a href="https://www.github.com/KyaniteMods" class="github-button"></a> <a href="https://www.youtube.com/channel/UCGJf3CI4DRLoJIAg8FegE0A" class="youtube-button"></a> <a href="https://twitter.com/kyanite_mods" class="twitter-button"></a></div>
 {% include mod-card-deeperdarker.html %}
 {% include mod-card-paragon.html %}
 {% include mod-card-headed.html %}
-<h1 data-string='{"translate":"category.index.news"}'>News</h1>
+<h1 data-translate-string='{"translate":"category.index.news"}'>News</h1>
 <div class="news-posts">
 {%- assign post_count = site.posts.size -%}
 {%- for post in site.posts limit: 3 -%}
@@ -23,5 +23,5 @@ title: Home
 	<br><h4>{{ post.title }}</h4></a>
 {%- endfor -%}
 </div><br>
-<a href="/news"><div class="minecraft-button" data-string='{"translate":"index.news.see_more"}'>See More</div></a>
+<a href="/news"><div class="minecraft-button" data-translate-string='{"translate":"index.news.see_more"}'>See More</div></a>
 <div style="text-align: center; margin-top: 50px;"><a href="https://discord.gg/GDNRd5yvxa" class="discord-button-large"></a></div>

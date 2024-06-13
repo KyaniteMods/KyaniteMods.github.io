@@ -1,4 +1,10 @@
 {
+    "global.title": "Kyanite Mods – %s",
+    "home.title": "Home",
+    "mods.title": "Mods",
+    "news.title": "News",
+    "about.title": "About",
+    "404.title": "Page not found",
     "index.kyanitemods.about_the_team": "Kyanite Mods is a group of <span style=\"font-style: italic;\">Minecraft: Java Edition</span> modders that aims to develop mods, in both <span style=\"font-style: italic;\">Forge</span> and <span style=\"font-style: italic;\">Fabric</span>, to complement and enhance <span style=\"font-style: italic;\">Minecraft</span> while keeping most content vanilla-friendly.",
     "mod_card.deeperdarker.short_description": "A mod that expands the Deep Dark by adding a new dimension!",
     "mod_card.paragon.short_description": "A lightweight and easy-to-use configuration library!",
