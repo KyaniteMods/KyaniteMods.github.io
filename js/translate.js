@@ -1,6 +1,6 @@
+---
+---
 class Translate {
-	static DEFAULT_LANGUAGE = 'pt';
-
 	constructor(language) {
 		this.language = language;
 		this.changeListeners = [];
@@ -51,9 +51,8 @@ class Translate {
 	}
 	
 	async reloadLoc() {
-		this.defaultFile = await fetch('/language/' + Translate.DEFAULT_LANGUAGE + '.json');
-		this.defaultFile = await this.defaultFile.clone().json();
-		if ((this.language || localStorage.language) === Translate.DEFAULT_LANGUAGE) {
+		this.defaultFile = JSON.parse('{{site.data.language.en | jsonify | replace: "'", "\\'" | replace: "\"", "\\\""}}');
+		if ((this.language || localStorage.language) === 'en') {
 			this.file = this.defaultFile;
 		} else {
 			this.file = await fetch('/language/' + (this.language || localStorage.language) + '.json');
@@ -119,7 +118,7 @@ switch (urlParams.get('lang')) {
 }
 
 if (localStorage.language === undefined) {
-	localStorage.language = Translate.DEFAULT_LANGUAGE;
+	localStorage.language = 'en';
 }
 
 var translate = new Translate();
